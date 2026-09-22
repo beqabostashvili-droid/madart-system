@@ -28,7 +28,7 @@ jobs:
     timeout-minutes: 60
     env:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      TEAM_ID: ${{ secrets.VERCEL_ORG_ID }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -42,7 +42,7 @@ jobs:
           for project in madart-admin madart-dispatcher madart-display madart-mobile madart-kiosk madart-pos madart-kitchen; do
             echo "::group::$project"
             rm -rf .vercel
-            vercel link --yes --project "$project" --scope "$VERCEL_ORG_ID" --token "$VERCEL_TOKEN"
-            vercel deploy --prod --yes --scope "$VERCEL_ORG_ID" --token "$VERCEL_TOKEN"
+            vercel link --yes --project "$project" --scope "$TEAM_ID" --token "$VERCEL_TOKEN"
+            vercel deploy --prod --yes --scope "$TEAM_ID" --token "$VERCEL_TOKEN"
             echo "::endgroup::"
           done
