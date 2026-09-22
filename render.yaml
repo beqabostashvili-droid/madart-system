@@ -8,10 +8,12 @@ services:
     plan: free
     region: frankfurt
     rootDir: .
-    buildCommand: corepack enable && corepack prepare pnpm@11.20.0 --activate && pnpm install --frozen-lockfile && pnpm turbo run build --filter=@madart/api...
+    buildCommand: npm install -g pnpm@11.20.0 && pnpm install --frozen-lockfile && pnpm turbo run build --filter=@madart/api...
     startCommand: pnpm --filter @madart/database migrate:deploy && node apps/api/dist/main.js
     healthCheckPath: /health
     envVars:
+      - key: NODE_VERSION
+        value: '24.19.0'
       - key: NODE_ENV
         value: production
       - key: API_PORT
