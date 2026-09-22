@@ -1,0 +1,48 @@
+# Deploys every frontend to Vercel on each push to main (production) – no Vercel
+# Git integration needed. Secrets: VERCEL_TOKEN (personal token), VERCEL_ORG_ID (team id).
+name: Deploy frontends to Vercel
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/admin/**'
+      - 'apps/dispatcher/**'
+      - 'apps/customer-display/**'
+      - 'apps/mobile-ordering/**'
+      - 'apps/kiosk/**'
+      - 'apps/pos/**'
+      - 'apps/production/**'
+      - 'packages/**'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/deploy-vercel.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm i -g vercel@48
+      # Hobby plans build one deployment at a time, so the apps are deployed sequentially.
+      - name: Deploy all apps (production)
+        run: |
+          set -e
+          for project in madart-admin madart-dispatcher madart-display madart-mobile madart-kiosk madart-pos madart-kitchen; do
+            echo "::group::$project"
+            rm -rf .vercel
+            vercel link --yes --project "$project" --scope "$VERCEL_ORG_ID" --token "$VERCEL_TOKEN"
+            vercel deploy --prod --yes --scope "$VERCEL_ORG_ID" --token "$VERCEL_TOKEN"
+            echo "::endgroup::"
+          done
