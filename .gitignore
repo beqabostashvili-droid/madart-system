@@ -13,3 +13,6 @@ packages/database/src/generated/
 apps/*/release/
 .DS_Store
 Thumbs.db
+
+.vercel
+.env*.local

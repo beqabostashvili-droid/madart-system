@@ -1,0 +1,10 @@
+node_modules
+.local
+.turbo
+**/dist
+**/.next
+**/node_modules
+.env
+.env.*
+tools/launch/*.ico
+tools/launch/*.png

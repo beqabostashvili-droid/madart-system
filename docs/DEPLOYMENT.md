@@ -27,6 +27,12 @@
 | admin, dispatcher, customer-display, mobile-ordering | **Vercel** (4 projects) | root directory = `apps/<name>`, `vercel.json` sets install/build via turbo; env `NEXT_PUBLIC_API_URL` |
 | kiosk, pos, production (web versions) | **Vercel** (3 static projects) | root directory = `apps/<name>`; env `VITE_API_URL` |
 
+Live Vercel projects (team `beqabostashvilis-projects`): https://madart-admin.vercel.app ·
+https://madart-dispatcher.vercel.app · https://madart-display.vercel.app ·
+https://madart-mobile.vercel.app · https://madart-kiosk.vercel.app ·
+https://madart-pos.vercel.app · https://madart-kitchen.vercel.app.
+Redeploy any of them from the repo root: `vercel link --project <name> && vercel deploy --prod`.
+
 Order of operations: Neon DB → Render API (needs `DATABASE_URL`, `API_PUBLIC_URL`, `JWT_SECRET`) → Vercel frontends (need the API URL) → set `CORS_ORIGINS` on Render to the 7 Vercel URLs → run `pnpm db:deploy` and seed against Neon with `SEED_PASSWORD` and the same `JWT_SECRET` as Render (device tokens are signed with it) → open the device URLs printed by the seed.
 
 ## Environment
