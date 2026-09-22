@@ -18,6 +18,17 @@
   `package.json`). Set `VITE_API_URL` at build time; the device token is
   entered once via `?token=` or the pairing screen and kept in local storage.
 
+## Free-tier hosting recipe (every module on its own public URL)
+
+| Piece | Service | Notes |
+|---|---|---|
+| PostgreSQL | **Neon** free project | pooled connection string → `DATABASE_URL`; migrate + seed from a developer machine (`pnpm db:deploy`, `SEED_PASSWORD=… pnpm db:seed`) |
+| API + Socket.IO | **Render** free web service | `render.yaml` blueprint in the repo root; sleeps after 15 min idle (first request wakes it in ~30-60 s) |
+| admin, dispatcher, customer-display, mobile-ordering | **Vercel** (4 projects) | root directory = `apps/<name>`, `vercel.json` sets install/build via turbo; env `NEXT_PUBLIC_API_URL` |
+| kiosk, pos, production (web versions) | **Vercel** (3 static projects) | root directory = `apps/<name>`; env `VITE_API_URL` |
+
+Order of operations: Neon DB → Render API (needs `DATABASE_URL`, `API_PUBLIC_URL`, `JWT_SECRET`) → Vercel frontends (need the API URL) → set `CORS_ORIGINS` on Render to the 7 Vercel URLs → run `pnpm db:deploy` and seed against Neon with `SEED_PASSWORD` and the same `JWT_SECRET` as Render (device tokens are signed with it) → open the device URLs printed by the seed.
+
 ## Environment
 See `.env.example`. Required in production: `DATABASE_URL`, `JWT_SECRET`
 (≥32 random chars), `CORS_ORIGINS` (exact origins of the web apps),
