@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "api", "runtimeExecutable": "pnpm", "runtimeArgs": ["--filter", "@madart/api", "dev"], "port": 4000 },
+    { "name": "admin", "runtimeExecutable": "pnpm", "runtimeArgs": ["--filter", "admin", "dev"], "port": 3001 },
+    { "name": "dispatcher", "runtimeExecutable": "pnpm", "runtimeArgs": ["--filter", "dispatcher", "dev"], "port": 3002 },
+    { "name": "customer-display", "runtimeExecutable": "pnpm", "runtimeArgs": ["--filter", "customer-display", "dev"], "port": 3003 },
+    { "name": "mobile-ordering", "runtimeExecutable": "pnpm", "runtimeArgs": ["--filter", "mobile-ordering", "dev"], "port": 3004 },
+    { "name": "kiosk", "runtimeExecutable": "pnpm", "runtimeArgs": ["--filter", "kiosk", "dev"], "port": 5173 },
+    { "name": "pos", "runtimeExecutable": "pnpm", "runtimeArgs": ["--filter", "pos", "dev"], "port": 5174 },
+    { "name": "production", "runtimeExecutable": "pnpm", "runtimeArgs": ["--filter", "production", "dev"], "port": 5175 }
+  ]
+}

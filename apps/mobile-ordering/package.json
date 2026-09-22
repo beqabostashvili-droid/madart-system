@@ -1,0 +1,33 @@
+{
+  "name": "mobile-ordering",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mobile pre-order PWA.",
+  "scripts": {
+    "dev": "next dev --port 3004",
+    "build": "next build",
+    "start": "next start --port 3004",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint app"
+  },
+  "dependencies": {
+    "@madart/api-client": "workspace:*",
+    "@madart/domain": "workspace:*",
+    "@madart/types": "workspace:*",
+    "@madart/ui": "workspace:*",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@madart/config": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^24.5.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "eslint": "^9.36.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.44.0"
+  }
+}

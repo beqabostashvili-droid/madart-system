@@ -1,0 +1,16 @@
+{
+  "extends": "@madart/config/tsconfig.node.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "noUncheckedIndexedAccess": false,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
+    "incremental": true
+  },
+  "include": ["src", "test"]
+}

@@ -1,0 +1,32 @@
+# Render Blueprint – free tier API (NestJS + Socket.IO).
+# Database: external (Neon free Postgres) via DATABASE_URL.
+# Free web services sleep after 15 min idle and wake on the next request (~30-60 s).
+services:
+  - type: web
+    name: madart-api
+    runtime: node
+    plan: free
+    region: frankfurt
+    rootDir: .
+    buildCommand: corepack enable && corepack prepare pnpm@11.20.0 --activate && pnpm install --frozen-lockfile && pnpm turbo run build --filter=@madart/api...
+    startCommand: pnpm --filter @madart/database migrate:deploy && node apps/api/dist/main.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: API_PORT
+        value: '10000'
+      - key: DATABASE_URL
+        sync: false # paste the Neon pooled connection string in the Render dashboard
+      - key: JWT_SECRET
+        generateValue: true
+      - key: API_PUBLIC_URL
+        sync: false # https://madart-api.onrender.com (or your custom domain)
+      - key: CORS_ORIGINS
+        sync: false # comma-separated Vercel URLs of the 7 frontends
+      - key: LOG_LEVEL
+        value: info
+      - key: PAYMENT_TERMINAL_PROVIDER
+        value: MOCK_TERMINAL
+      - key: MOCK_TERMINAL_DELAY_MS
+        value: '1500'

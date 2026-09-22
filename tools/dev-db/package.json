@@ -1,0 +1,24 @@
+{
+  "name": "@madart/dev-db",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Embedded PostgreSQL for development machines without Docker (ASSUMPTION A-08)",
+  "type": "module",
+  "scripts": {
+    "start": "tsx start.ts"
+  },
+  "optionalDependencies": {
+    "@embedded-postgres/windows-x64": "17.10.0-beta.17",
+    "@embedded-postgres/linux-x64": "17.10.0-beta.17",
+    "@embedded-postgres/linux-arm64": "17.10.0-beta.17",
+    "@embedded-postgres/darwin-arm64": "17.10.0-beta.17",
+    "@embedded-postgres/darwin-x64": "17.10.0-beta.17"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.0",
+    "@types/pg": "^8.15.0"
+  },
+  "dependencies": {
+    "pg": "^8.16.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@madart/config",
+  "version": "0.1.0",
+  "private": true,
+  "files": ["*.json", "*.js"],
+  "exports": {
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./tsconfig.node.json": "./tsconfig.node.json",
+    "./tsconfig.react.json": "./tsconfig.react.json",
+    "./eslint.base.mjs": "./eslint.base.mjs"
+  }
+}

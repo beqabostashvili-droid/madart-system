@@ -1,0 +1,43 @@
+{
+  "name": "madart-system",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MADART Smart Ordering & Production System",
+  "packageManager": "pnpm@11.20.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:api": "pnpm --filter @madart/api dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:e2e": "pnpm --filter @madart/api test:e2e",
+    "db:local": "tsx tools/dev-db/start.ts",
+    "db:migrate": "pnpm --filter @madart/database migrate",
+    "db:deploy": "pnpm --filter @madart/database migrate:deploy",
+    "db:generate": "pnpm --filter @madart/database generate",
+    "db:seed": "pnpm --filter @madart/database seed",
+    "db:reset": "pnpm --filter @madart/database reset",
+    "db:studio": "pnpm --filter @madart/database studio",
+    "clean": "turbo run clean && rimraf node_modules",
+    "shortcuts": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/launch/create-shortcuts.ps1",
+    "launch:kiosk": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/launch/launch.ps1 -App kiosk",
+    "launch:pos": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/launch/launch.ps1 -App pos",
+    "launch:production": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/launch/launch.ps1 -App production",
+    "db:clean": "pnpm --filter @madart/database clean:data"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.0",
+    "dotenv": "^17.2.0",
+    "eslint": "^9.36.0",
+    "prettier": "^3.6.0",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.20.0",
+    "turbo": "^2.5.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.44.0"
+  }
+}

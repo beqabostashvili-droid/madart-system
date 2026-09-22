@@ -1,0 +1,2658 @@
+{
+ "categories": [
+  {
+   "id": 125,
+   "name": "ტორტები",
+   "subcategories": [
+    {
+     "id": 191,
+     "name": "მხოლოდ შოკოლადი"
+    },
+    {
+     "id": 192,
+     "name": "ტყუპი"
+    },
+    {
+     "id": 198,
+     "name": "ხილი"
+    },
+    {
+     "id": 199,
+     "name": "სპეც ტორტი"
+    },
+    {
+     "id": 200,
+     "name": "სამარხვო ტორტი"
+    }
+   ],
+   "count": 7
+  },
+  {
+   "id": 126,
+   "name": "ნამცხვრები",
+   "subcategories": [
+    {
+     "id": 142,
+     "name": "იდეალი"
+    },
+    {
+     "id": 147,
+     "name": "შუ ეკლერი"
+    },
+    {
+     "id": 162,
+     "name": "მედოკი"
+    },
+    {
+     "id": 185,
+     "name": "ხვეულა"
+    },
+    {
+     "id": 188,
+     "name": "რაფაელო"
+    },
+    {
+     "id": 196,
+     "name": "ტარტალეტკა"
+    },
+    {
+     "id": 197,
+     "name": "ციყვი"
+    },
+    {
+     "id": 201,
+     "name": "სამარხვო"
+    },
+    {
+     "id": 209,
+     "name": "პავლოვა"
+    },
+    {
+     "id": 212,
+     "name": "ჩიტის რძე"
+    },
+    {
+     "id": 222,
+     "name": "რულეტი"
+    },
+    {
+     "id": 226,
+     "name": "ნაპოლეონი"
+    },
+    {
+     "id": 228,
+     "name": "აკორდი"
+    },
+    {
+     "id": 229,
+     "name": "ტირამისუ"
+    }
+   ],
+   "count": 27
+  },
+  {
+   "id": 127,
+   "name": "ცხობა",
+   "subcategories": [
+    {
+     "id": 136,
+     "name": "ხაჭაპური"
+    },
+    {
+     "id": 137,
+     "name": "ლობიანი"
+    },
+    {
+     "id": 150,
+     "name": "ღვეზელი"
+    },
+    {
+     "id": 153,
+     "name": "სასმელი"
+    }
+   ],
+   "count": 2
+  },
+  {
+   "id": 129,
+   "name": "აქსესუარები",
+   "subcategories": [],
+   "count": 28
+  },
+  {
+   "id": 205,
+   "name": "ბოქსები",
+   "subcategories": [],
+   "count": 6
+  },
+  {
+   "id": 208,
+   "name": "სასმელები",
+   "subcategories": [
+    {
+     "id": 213,
+     "name": "ლაღიძის წყალი"
+    },
+    {
+     "id": 214,
+     "name": "კოკა-კოლა/coca-cola"
+    },
+    {
+     "id": 215,
+     "name": "სპრაიტი/sprite"
+    },
+    {
+     "id": 216,
+     "name": "ფანტა/fanta"
+    },
+    {
+     "id": 218,
+     "name": "ცივი ჩაი/FUSE TEA"
+    },
+    {
+     "id": 219,
+     "name": "წყალი"
+    }
+   ],
+   "count": 22
+  }
+ ],
+ "products": [
+  {
+   "id": 734,
+   "category_id": 125,
+   "sub_id": 199,
+   "name": "ტორტი კაპუჩინო",
+   "price": 45,
+   "price_old": 0,
+   "image": "1c4c1d9688c77c8a3728d7a4c7e78b05.jpg",
+   "text": "<p>ინგრედიენტები:ფ<span style=\"text-decoration: underline;\">ქვილი ხორბლის,</span> შაქარი,<span style=\"text-decoration: underline;\"> კვერცხი, რძე აღდგენილი, კარაქი 82%, ნაღები 36%</span>, სიმინდის სახამებელი, გლუკოზა, ზეთი მზესუმზირის რაფინ. ყავა, შესქელებული რძე, <span style=\"text-decoration: underline;\">კაკაო</span>, <span style=\"text-decoration: underline;\">შოკოლადი იტალიური, ჟელატინის დეკორი,</span> ლიქიორი, რომი, სოდა, ვანილი, მარილი. 100გ პროდუქტ. კვებითი ღირებ.:ცილა 8გ. ცხიმი19გ. ნახშირწ.42გ.371 კკალ/1558კჯ</p>",
+   "pieces": "10",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "სპეც ტორტი",
+   "gallery": [
+    "2699e521debef54830c60ed014a65be9.jpg",
+    "836969cf75ab98840706e99b72b7837e.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "შავი და თეთრი შოკოლადის ჟელატინები"
+    },
+    {
+     "name": "კრემი",
+     "value": "შოკოლადის კრემი, ყავის კრემი, ვანილის კრემი"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "თეთრი ბისკვიტი, შოკოლადის  ბისკვიტი, ყავის ბისკვიტი"
+    },
+    {
+     "name": "ნაჭერი",
+     "value": "10"
+    },
+    {
+     "name": "დიამეტრი (სმ)",
+     "value": "17"
+    },
+    {
+     "name": "სიმაღლე (სმ)",
+     "value": "9"
+    }
+   ]
+  },
+  {
+   "id": 736,
+   "category_id": 125,
+   "sub_id": 199,
+   "name": "მარწყვის სპეც ტორტი",
+   "price": 55,
+   "price_old": 0,
+   "image": "8857110bf4fc41c24992bd24759196a7.jpg",
+   "text": "<p>ალერგენები: ფქვ. ხორბლის, კვერცხი, აღდგენილი რძე, კარაქი82%, შესქ. რძე, ნაღები36%, მარწყვი. 100გ პროდ. კვებითი ღირებ. ცილა 4,8გ. ცხიმი18გ. ნახშირწყალი32გ. 309კკალ/1298კჯ.</p>",
+   "pieces": "10",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "სპეც ტორტი",
+   "gallery": [
+    "bf6a88a5f03e4e59f55fc3666106681d.jpg",
+    "19392f6b4c09c75e82fb330a16c9c3be.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "მარწყვი"
+    },
+    {
+     "name": "ხილი",
+     "value": "სპეც ჩაკრემვა მარწყვი"
+    },
+    {
+     "name": "კრემი",
+     "value": "მოხარშული ვანილის კრემი"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "თეთრი 3ფ"
+    },
+    {
+     "name": "დიამეტრი (სმ)",
+     "value": "17"
+    },
+    {
+     "name": "სიმაღლე (სმ)",
+     "value": "7"
+    }
+   ]
+  },
+  {
+   "id": 709,
+   "category_id": 125,
+   "sub_id": 192,
+   "name": "ტყუპი ტორტი",
+   "price": 38,
+   "price_old": 0,
+   "image": "82c96155572f6b9fa07c29be4a95c9d9.jpg",
+   "text": "<p>ინგრედიენტები: ფ<span style=\"text-decoration: underline;\">ქვილი ხორბლის უ/ხ, შაქრის პუდრა, კვერცხი, რძე აღდგენილი, კარაქი 82%, რძის ნაღები 36%</span>,,კ<span style=\"text-decoration: underline;\">აკაო, შოკოლადი,</span> <span style=\"text-decoration: underline;\">მოხარშული შესქელებული რძე,</span> ჟოლო, მარწყვი,.რომი, ვანილი, მარილი, 100გ პროდუქტ. კვებითი ღირებ.: ცილა 6 გ. ცხიმი17გ. ნახშირწ. 39გ.332 კკალ/1394კჯ</p>",
+   "pieces": "10",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ტყუპი",
+   "gallery": [
+    "2e5c2f05dec64f9e26d8bb20ce3de1a1.jpg",
+    "b2c9a457dae39f0ee68682b7928142b6.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "ჟოლოს და გულის ფორმის ჟელატინი, შოკოლადის ფირფიტები"
+    },
+    {
+     "name": "ხილი",
+     "value": "მარწყვი, ჟოლო"
+    },
+    {
+     "name": "კრემი",
+     "value": "შოკოლადის მოხარშული კრემი , ვანილის მოხარშული კრემი"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "შავი-თეთრი 3ფ"
+    },
+    {
+     "name": "დიამეტრი (სმ)",
+     "value": "17"
+    },
+    {
+     "name": "სიმაღლე (სმ)",
+     "value": "6,5/5,5"
+    }
+   ]
+  },
+  {
+   "id": 711,
+   "category_id": 125,
+   "sub_id": 192,
+   "name": "ტყუპი ტორტი",
+   "price": 87,
+   "price_old": 0,
+   "image": "cde857a401ebd2fd28b1fa179b7b01dc.jpg",
+   "text": "<p>ინგრედიენტები: ფ<span style=\"text-decoration: underline;\">ქვილი ხორბლის უ/ხ, კვერცხი, რძე აღდგენილი, კარაქი 82%, ნაღები 36%</span>, <span style=\"text-decoration: underline;\">მოხარშული შესქელებული რძე,კაკაო, შოკოლადი</span>, რომი, მარწყვი.ჟოლო, ვანილი, მარილი. 100გ პროდუქტ. კვებითი ღირებ.: ცილა 6გ. ცხიმი17გ. ნახშირწ. 39გ. 332კკალ/1394კჯ</p>",
+   "pieces": "23",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ტყუპი",
+   "gallery": [
+    "826bee9147d0309b91afae6a51a0b83f.jpg",
+    "13cfec5f58e1cebb1845e5512ad3c21d.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "ჟოლოს და გულის ფორმის ჟელატინი, შოკოლადის ფირფიტები"
+    },
+    {
+     "name": "ხილი",
+     "value": "მარწყვი, ჟოლო"
+    },
+    {
+     "name": "კრემი",
+     "value": "შოკოლადის მოხარშული კრემი , ვანილის მოხარშული კრემი"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "შავი-თეთრი 3ფ"
+    },
+    {
+     "name": "დიამეტრი (სმ)",
+     "value": "26"
+    },
+    {
+     "name": "სიმაღლე (სმ)",
+     "value": "6.5/5.5"
+    }
+   ]
+  },
+  {
+   "id": 706,
+   "category_id": 125,
+   "sub_id": 198,
+   "name": "ხილის ტორტი",
+   "price": 29,
+   "price_old": 0,
+   "image": "81f76f17bd90db53f95f4de8582ef30b.jpg",
+   "text": "<p>ინგრედიენტები: ფ<span style=\"text-decoration: underline;\">ქვილი ხორბლის უ/ხ, შაქრის პუდრა, კვერცხი, რძე აღდგენილი, კარაქი 82%, რძის ნაღები 36%</span>,, ჟოლო, მარწყვი,.რომი, ვანილი, მარილი, 100გ პროდუქტ. კვებითი ღირებ.: ცილა 5 გ. ცხიმი16გ. ნახშირწ. 38გ.317 კკალ/1331</p>",
+   "pieces": "10",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ხილი",
+   "gallery": [
+    "dc17a3253570cdba470aa16b755f4a87.jpg",
+    "49a3088eb172f27640121fa8a0578b79.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "ჟოლოს ჟელატინი და შოკოლადის ფირფიტები"
+    },
+    {
+     "name": "ხილი",
+     "value": "მარწყვი, ჟოლო"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის მოხარშული კრემი"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "თეთრი 3ფ"
+    },
+    {
+     "name": "დიამეტრი (სმ)",
+     "value": "17"
+    },
+    {
+     "name": "სიმაღლე (სმ)",
+     "value": "6.5"
+    }
+   ]
+  },
+  {
+   "id": 707,
+   "category_id": 125,
+   "sub_id": 198,
+   "name": "ხილის ტორტი",
+   "price": 49,
+   "price_old": 0,
+   "image": "1c16251f8d3192f29180add4a80c90ba.jpg",
+   "text": "<p>ინგრედიენტები: ფ<span style=\"text-decoration: underline;\">ქვილი ხორბლის უ/ხ, შაქრის პუდრა, კვერცხი, რძე აღდგენილი, კარაქი 82%, რძის ნაღები 36%</span>,, ჟოლო, მარწყვი,.რომი, ვანილი, მარილი, 100გ პროდუქტ. კვებითი ღირებ.: ცილა 5 გ. ცხიმი16გ. ნახშირწ. 38გ.317 კკალ/1331</p>",
+   "pieces": "17",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ხილი",
+   "gallery": [
+    "337184906bcfb635c2f2ed3b792c9b45.jpg",
+    "5e58f572d8268a96400c2581c93e99a4.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "ჟოლოს ჟელატინი და შოკოლადის ფირფიტები"
+    },
+    {
+     "name": "ხილი",
+     "value": "მარწყვი, ჟოლო"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის მოხარშული კრემი"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "თეთრი 3ფ"
+    },
+    {
+     "name": "დიამეტრი (სმ)",
+     "value": "22"
+    },
+    {
+     "name": "სიმაღლე (სმ)",
+     "value": "6.5"
+    }
+   ]
+  },
+  {
+   "id": 287,
+   "category_id": 125,
+   "sub_id": 191,
+   "name": "ტორტი მხოლოდ შოკოლადი",
+   "price": 38,
+   "price_old": 0,
+   "image": "98bf05e3c4054f26a7dcc851a4ddf53c.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, კვერცხი,</span> <span style=\"text-decoration: underline;\">შოკოლადი, კაკაო, კარაქი82%, რძე აღდგენილი (მშრალი რძე</span>, წყალი), მ<span style=\"text-decoration: underline;\">ოხარშული შესქელებული რძე,</span> ზეთი მზესუმზირის რაფინ. სოდა, მარილი, ვანილი, 100გ პროდუქტის კვებითი ღირებულება: ცილა 6გ, ცხიმი 18 გ, ნახშირწყალი 40გ. 346კკალ/1453კჯ</p>",
+   "pieces": "10",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "მხოლოდ შოკოლადი",
+   "gallery": [
+    "1621548e1f1f6842369df67ff366f7a7.jpg",
+    "949c527a275ea033d51d6e1ff8a375e6.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "გულის ფორმის ჟელატინი და შოკოლადის ფირფიტები"
+    },
+    {
+     "name": "კრემი",
+     "value": "შოკოლადის მოხარშული კრემი"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "შავი 3ფ"
+    },
+    {
+     "name": "დიამეტრი (სმ)",
+     "value": "17"
+    },
+    {
+     "name": "სიმაღლე (სმ)",
+     "value": "5,5"
+    }
+   ]
+  },
+  {
+   "id": 556,
+   "category_id": 126,
+   "sub_id": 222,
+   "name": "მერინგის რულეტი",
+   "price": 27.9,
+   "price_old": 0,
+   "image": "eeddd3bda2861af2a7f7aebd3627db11.jpg",
+   "text": "<p>&nbsp;ინგრედიენტები: <span style=\"text-decoration: underline;\">კვერცხის ცილა</span>, შაქარი, <span style=\"text-decoration: underline;\">არაჟანი</span> <span style=\"text-decoration: underline;\">დაწურული,</span> <span style=\"text-decoration: underline;\">სახამებელი</span>, <span style=\"text-decoration: underline;\">ნაღები, ნუშის ფქვილი,</span> <span style=\"text-decoration: underline;\">შესქელებული რძ</span>ე, ჟოლოს და შავი მოცხარის კონფიტიური, ლიმონმჟავა, ძმარი, ვანილი. მარილი.100გ პროდ.კვებ.ღირებ.: ცილა 17გ გ.ცხიმი 15 გ.ნახშირწყალი 40გ ენერგეტიკ. ღირებ: 363კკალ/1524კჯ.</p>",
+   "pieces": "6",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "რულეტი",
+   "gallery": [
+    "c70cbfb300a6bdaf6c86139cc3349156.jpg"
+   ],
+   "specs": [
+    {
+     "name": "სიგრძე",
+     "value": "23.5 სმ"
+    },
+    {
+     "name": "სიგანე",
+     "value": "7 სმ"
+    },
+    {
+     "name": "წონა",
+     "value": "0.600 გრ"
+    },
+    {
+     "name": "დეკორი",
+     "value": "ბეზე"
+    },
+    {
+     "name": "ხილი",
+     "value": "ჟოლო და შავი მოცხარის კონფიტიური"
+    },
+    {
+     "name": "კრემი",
+     "value": "ნაღების კრემი"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "გამომცხვარი ბეზე"
+    }
+   ]
+  },
+  {
+   "id": 732,
+   "category_id": 126,
+   "sub_id": 126,
+   "name": "დიდი მერინგის რულეტი კენკრის",
+   "price": 99,
+   "price_old": 0,
+   "image": "fcd440618c70e71ed2b27e41bc04ea92.jpg",
+   "text": "<p>ინგრედიენტები:<span style=\"text-decoration: underline;\"> კვერცხის ცილა</span>, შაქარი, <span style=\"text-decoration: underline;\">არაჟანი</span> <span style=\"text-decoration: underline;\">დაწურული,</span> <span style=\"text-decoration: underline;\">სახამებელი</span>, <span style=\"text-decoration: underline;\">ნაღები, ნუშის ფქვილი,</span> ჟოლოს და შავი მოცხარის კონფიტიური, ვანილი. მარილი.100გ პროდ.კვებ.ღირებ.: ცილა 12გ გ.ცხიმი 18გ.ნახშირწყალი 37გ ენერგეტიკ. ღირებ: 358კკალ/1503კჯ.</p>",
+   "pieces": "16/20",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ნამცხვრები",
+   "gallery": [
+    "9ca86f198746b6b97f07a9138ad8b40c.jpg"
+   ],
+   "specs": [
+    {
+     "name": "სიგრძე",
+     "value": "37სმ"
+    },
+    {
+     "name": "სიგანე",
+     "value": "12სმ"
+    },
+    {
+     "name": "წონა",
+     "value": "1.700კგ"
+    },
+    {
+     "name": "დეკორი",
+     "value": "ბეზე"
+    },
+    {
+     "name": "ხილი",
+     "value": "ჟოლო და შავი მოცხარის კონფიტიური"
+    },
+    {
+     "name": "კრემი",
+     "value": "ნაღების კრემი"
+    },
+    {
+     "name": "სიმაღლე (სმ)",
+     "value": "8სმ"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "გამომცხვარი ბეზე"
+    }
+   ]
+  },
+  {
+   "id": 733,
+   "category_id": 126,
+   "sub_id": 126,
+   "name": "დიდი სენატორი რულეტი",
+   "price": 99,
+   "price_old": 0,
+   "image": "540906e9014370f8c3a59952c9390855.jpg",
+   "text": "<p>ინგრედიენტები:<span style=\"text-decoration: underline;\"> კვერცხის ცილა</span>, შაქარი, <span style=\"text-decoration: underline;\">არაჟანი</span> <span style=\"text-decoration: underline;\">დაწურული,</span> <span style=\"text-decoration: underline;\">სახამებელი</span>, <span style=\"text-decoration: underline;\">ნაღები, ნუშის ფქვილი,</span> ჟოლოს და შავი მოცხარის კონფიტიური, ვანილი. მარილი.100გ პროდ.კვებ.ღირებ.: ცილა 12გ გ.ცხიმი 18გ.ნახშირწყალი 37გ ენერგეტიკ. ღირებ: 358კკალ/1503კჯ.</p>",
+   "pieces": "16/20",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ნამცხვრები",
+   "gallery": [
+    "151c77e9aa701349cb55f87afdca24fc.jpg"
+   ],
+   "specs": [
+    {
+     "name": "სიგრძე",
+     "value": "37სმ"
+    },
+    {
+     "name": "სიგანე",
+     "value": "12სმ"
+    },
+    {
+     "name": "წონა",
+     "value": "1.800კგ"
+    },
+    {
+     "name": "დეკორი",
+     "value": "ბეზე"
+    },
+    {
+     "name": "კრემი",
+     "value": "ყავის ნაღების კრემი"
+    },
+    {
+     "name": "სიმაღლე (სმ)",
+     "value": "8სმ"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "მინანქარი, ყავის ნაღების კრემი, ნიგოზი"
+    }
+   ]
+  },
+  {
+   "id": 696,
+   "category_id": 126,
+   "sub_id": 126,
+   "name": "ნაპოლეონი მარწყვით",
+   "price": 45,
+   "price_old": 0,
+   "image": "a13b2ae2daf2cd5f7eb767af0668d67e.jpg",
+   "text": "<p>ინგრედიენტები :<span style=\"text-decoration: underline;\">ფქვილი ხორბლის,</span> შაქარი, <span style=\"text-decoration: underline;\">მარგარინი, კარაქი, კვერცხი, ნაღები მცენარეული, რძე აღდგენილი</span>, <span style=\"text-decoration: underline;\">მარწყვი</span> 5%, კონიაკი, რომი,  ძმარი, ვანილი, მარილი. 100გ პროდუქტ. კვებითი ღირებ. ცილა 6გ. ცხიმი19გ. ნახშირწყალი 39,5გ. 353კკალ/1483კჯ.</p>",
+   "pieces": "6",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ნამცხვრები",
+   "gallery": [
+    "aaf946362cd7c339232b628b6f4025ed.jpg"
+   ],
+   "specs": [
+    {
+     "name": "სიგრძე",
+     "value": "29 სმ"
+    },
+    {
+     "name": "სიგანე",
+     "value": "14 სმ"
+    },
+    {
+     "name": "დეკორი",
+     "value": "მარწყვი"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის მოხარშული კრემი"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "ვანილის მოხარშული კრემი"
+    }
+   ]
+  },
+  {
+   "id": 702,
+   "category_id": 126,
+   "sub_id": 126,
+   "name": "სამარხვო ნაპოლეონი მარწყვით",
+   "price": 45,
+   "price_old": 0,
+   "image": "549a7ebc2bc18edc227b3e72d2d0cf67.jpg",
+   "text": "<p>ინგრედიენტები:ფ<span style=\"text-decoration: underline;\">ქვილი ხორბლის, მარგარინი მყარი(</span>რაფინირებული ზეთი მზესუმზირის ნატურალური და მოდიფ. სახით, მჟავიანობის რეგულატორი ლიმონმჟავა E322), მარწყვი 5%, <span style=\"text-decoration: underline;\"> ნაღები მცენარეული,</span> კონიაკი, ვანილი, მარილი. 100გ პროდუქტ. კვებითი ღირებ.: ცილა 6გ. ცხიმი19გ. ნახშირწყალი33 გ. 327კკალ/1376კჯ.</p>",
+   "pieces": "6",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ნამცხვრები",
+   "gallery": [
+    "aaf946362cd7c339232b628b6f4025ed.jpg"
+   ],
+   "specs": [
+    {
+     "name": "სიგრძე",
+     "value": "29 სმ"
+    },
+    {
+     "name": "სიგანე",
+     "value": "14 სმ"
+    },
+    {
+     "name": "დეკორი",
+     "value": "მარწყვი"
+    },
+    {
+     "name": "კრემი",
+     "value": "თეთრი სამარხვო კრემი"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "თეთრი სამარხვო კრემი"
+    }
+   ]
+  },
+  {
+   "id": 623,
+   "category_id": 126,
+   "sub_id": 201,
+   "name": "სამარხვო პატარა ნაპოლეონი",
+   "price": 14,
+   "price_old": 0,
+   "image": "3b62aa6e82641f423f63bbbc7fc15bf5.jpg",
+   "text": "<p>ინგრედიენტები:<span style=\"text-decoration: underline;\">ფქვილი ხორბლის</span>, შაქარი, <span style=\"text-decoration: underline;\">მარგარინი მყარი(რაფინირებული ზეთი მზესუმზირის ნატურალური და მოდიფ. სახით),&nbsp; ნაღები (მცენარეული)36%,</span> კონიაკი, ვანილი, მარილი. 100გ პროდუქტ. კვებითი ღირებ.: ცილა 6გ. ცხიმი19გ. ნახშირწყალი 29გ. 311კკალ/1306კჯ.</p>",
+   "pieces": "3",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "სამარხვო",
+   "gallery": [
+    "14f76a2a39284944b4a5586294373e1c.jpg"
+   ],
+   "specs": [
+    {
+     "name": "სიგრძე",
+     "value": "13 სმ"
+    },
+    {
+     "name": "სიგანე",
+     "value": "11 სმ"
+    },
+    {
+     "name": "კრემი",
+     "value": "სამარხვო კრემი"
+    }
+   ]
+  },
+  {
+   "id": 625,
+   "category_id": 126,
+   "sub_id": 201,
+   "name": "სამარხვო დიდი ნაპოლეონი",
+   "price": 26.5,
+   "price_old": 0,
+   "image": "04895a7e5e97e81c1df4546661207837.jpg",
+   "text": "<p>&nbsp; ინგრედიენტები:<span style=\"text-decoration: underline;\">ფქვილი ხორბლის</span>, შაქარი, <span style=\"text-decoration: underline;\">მარგარინი მყარი(რაფინირებული ზეთი მზესუმზირის ნატურალური და მოდიფ. სახით),&nbsp; ნაღები (მცენარეული)36%,</span> კონიაკი, ვანილი, მარილი. 100გ პროდუქტ. კვებითი ღირებ.: ცილა 5გ. ცხიმი19გ. ნახშირწყალი 38გ. 340კკალ/1428კჯ.</p>",
+   "pieces": "6",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "სამარხვო",
+   "gallery": [
+    "458db1c849244c111db070c73f28ff8c.jpg"
+   ],
+   "specs": [
+    {
+     "name": "სიგრძე",
+     "value": "29 სმ"
+    },
+    {
+     "name": "სიგანე",
+     "value": "14 სმ"
+    },
+    {
+     "name": "კრემი",
+     "value": "სამარხვო კრემი"
+    }
+   ]
+  },
+  {
+   "id": 746,
+   "category_id": 126,
+   "sub_id": 209,
+   "name": "ფისტის პავლოვა ჟოლოთი და შოკოლადით",
+   "price": 6.5,
+   "price_old": 0,
+   "image": "ae6456753d389e67d0c9c8206a2b537c.jpg",
+   "text": "<p>ინგრედიენტები:<span style=\"text-decoration: underline;\"> კვერცხი, შაქარი, ნაღები რძის, ფქვილი ხორბლის, რძე აღდგენილი, კარაქი, არაჟანი, შესქელებული რძე, ფისტას კრემი,შოკოლადის კრემი, </span>სახამებელი <span style=\"text-decoration: underline;\">ნუშისფქვილი,მ</span>ჟავიანობის რეგულატორი E330 ლიმონმჟავა, ჟოლო, ჟოლოს ჩირი, ფისტა, რომი, ვანილი, მარილი. 100გ პროდუქტის კვებითი.ღირ:.ცილა 6, ცხიმი 23, ნახშირწყალი 34, 367კკალ/ 15411კჯ</p>\r\n<p>&nbsp;</p>",
+   "pieces": "",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "პავლოვა",
+   "gallery": [
+    "34e1ac6a27e6cfaa5dd00d4e8c472b00.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "ჟოლო, სუბლიმირებული ჟოლო"
+    },
+    {
+     "name": "ხილი",
+     "value": "ჟოლო"
+    },
+    {
+     "name": "კრემი",
+     "value": "შოკოლადის კრემი, ვანილის კრემი ფისტით."
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "გამომცხვარი ბეზე"
+    }
+   ]
+  },
+  {
+   "id": 745,
+   "category_id": 126,
+   "sub_id": 209,
+   "name": "ჟოლოს პავლოვა",
+   "price": 5.5,
+   "price_old": 0,
+   "image": "5f617e23c0d7bed57e70146efc0cc596.jpg",
+   "text": "<p>ინგრედიენტები<span style=\"text-decoration: underline;\">: კვერცხი,</span> შაქარი, <span style=\"text-decoration: underline;\">ნაღები რძის, ფქვილი, რძე აღდგენილი, კარაქი,</span> <span style=\"text-decoration: underline;\">არაჟანი, შესქელებული რძე, </span>სახამებელი<span style=\"text-decoration: underline;\"> ნუშის ფქვილი</span>,მჟავიანობის რეგულატორი E330 ლიმონმჟავა, ჟოლო<span style=\"text-decoration: underline;\">, თეთრი შოკოლადი,</span> ჟოლოს ჩირი, რომი, ვანილი, მარილი. 100გ პროდუქტის კვებითი.ღირ:.ცილა 5, ცხიმი 22, ნახშირწყალი 30, 338კკალ/ 1413კჯ</p>\r\n<p> </p>",
+   "pieces": "",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "პავლოვა",
+   "gallery": [
+    "15782f1b418e5016ef74e39cd8f6991c.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "ჟოლო, სუბლიმირებული ჟოლო"
+    },
+    {
+     "name": "ხილი",
+     "value": "ჟოლო"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის კრემი ნაღებით"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "გამომცხვარი ბეზე"
+    }
+   ]
+  },
+  {
+   "id": 738,
+   "category_id": 126,
+   "sub_id": 147,
+   "name": "ფისტის შუ",
+   "price": 3.9,
+   "price_old": 0,
+   "image": "4e435442a3b491b58ff1c4442afc8937.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, კვერცხი, ნაღები რძის, კარაქი, შაქარი, რძე  აღდგენილი (წყალი,მშრ.რძე) ფისტის შოკოკრემი, ფისტას მინანქარი, </span>ვანილი, რომი, კონიაკი,მარილი, 100გ პროდუქტის კვებ ღირებ: ცილა 9გ, ცხიმი 20გ ნახშირწყალი 36გ, 364კკალ/1512კჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "შუ ეკლერი",
+   "gallery": [
+    "5f2875259a7e55445bbbdd6eb2936e14.jpg",
+    "54e7504c3b638e358190f9e3bf94705e.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "ფისტას მინანქარი"
+    },
+    {
+     "name": "კრემი",
+     "value": "ფისტის შოკოკრემი"
+    }
+   ]
+  },
+  {
+   "id": 741,
+   "category_id": 126,
+   "sub_id": 147,
+   "name": "ყავის შუ",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "553c09c330f3bc215d4c026dc2482b44.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, კვერცხი ნაღები რძის, კარაქი, შაქარი, რძე აღდგენილი(წყალი,მშრ.რძე.&nbsp; სიმინდის სახამებელი, თხილის პასტის მინანქარი, ყავა, </span>ვანილი,ლიქიორი კალუა, მარილი, 100გ პრდუქტის კვებ ღირებ: ცილა9 გ, ცხიმი 20გ ნახშირწყალი 35 გ. 356 კკალ/1495ჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "შუ ეკლერი",
+   "gallery": [
+    "36629cf6a1d4ca530f26ab0fdcbb35b0.jpg",
+    "a25be4ebe8040fd5111f48d68bcc91f1.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "თხილის პასტის მინანქარი"
+    },
+    {
+     "name": "კრემი",
+     "value": "ყავის კრემი"
+    }
+   ]
+  },
+  {
+   "id": 739,
+   "category_id": 126,
+   "sub_id": 147,
+   "name": "ჟოლოს შუ",
+   "price": 3.9,
+   "price_old": 0,
+   "image": "5ef9d0086133fde8ba214d546561c99c.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, კვერცხი ნაღები რძის, კარაქი,</span> შაქარი,<span style=\"text-decoration: underline;\"> რძე აღდგენილი(</span>წყალი<span style=\"text-decoration: underline;\">,მშრ.რძე</span>), სიმინდის სახამებელი, ჯემი(ჟოლო, მოცხარი), მარწყვის მინანქარი, ვანილი, რომი, მარილი, 100გ პროდუქტის კვებ ღირებ: ცილა 10გ, ცხიმი20გ ნახშირწყალი 33 გ. 352კკალ/1478,4კჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "შუ ეკლერი",
+   "gallery": [
+    "48f13b3bdbb1267f21802560c385dd8f.jpg",
+    "6690674f998981f6b7d066d1ed6de5e5.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "მარწყვის მინანქარი"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის კრემი"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "ჟოლოს და მოცხარის ჯემი"
+    }
+   ]
+  },
+  {
+   "id": 740,
+   "category_id": 126,
+   "sub_id": 147,
+   "name": "შოკოლადის შუ",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "153ea7f970d6ddac865fc28817347613.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, კვერცხი ნაღები რძის, კარაქი,</span> შაქარი,<span style=\"text-decoration: underline;\"> რძე აღდგენილი(</span>წყალი<span style=\"text-decoration: underline;\">,მშრ.რძე</span>), <span style=\"text-decoration: underline;\">კაკაო, შოკოლადი იტალიური შავი, შოკოლადის მინანქარი,</span> ვანილი, რომი, მარილი, 100გ პროდუქტის კვებ ღირებ: ცილა 10გ, ცხიმი 21გ ნახშირწყალი 34 გ. 362კკალ/1520,4კჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "შუ ეკლერი",
+   "gallery": [
+    "df576204635ff7d164e6c4e32fc382eb.jpg",
+    "5f4b27c75885aad9d4f00bd87b29b688.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "შოკოლადის მინანქარი"
+    },
+    {
+     "name": "კრემი",
+     "value": "შოკოლადის კრემი"
+    }
+   ]
+  },
+  {
+   "id": 214,
+   "category_id": 126,
+   "sub_id": 147,
+   "name": "შუ",
+   "price": 3.1,
+   "price_old": 0,
+   "image": "4a0643a14a82d49a327135317d394503.jpg",
+   "text": "<p> ინგრედიენტები: ფქ<span style=\"text-decoration: underline;\">ვილი ხორბლის, ნაღები რძის, კარაქი, </span>შაქარი<span style=\"text-decoration: underline;\">, რძე აღდგენილი(წყალი,მშრ.რძე) კვერცხი,</span> ლიქიორი, რომი, ვანილი, მარილი,  100გ პროდუქტის კვებ ღირებ: ცილა 6გ, ცხიმი 18გ ნახშირწყალი 38 გ. 338კკალ/1419კჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "შუ ეკლერი",
+   "gallery": [
+    "32f8d24462c957b11442fe6e08e08847.jpg"
+   ],
+   "specs": [
+    {
+     "name": "კრემი",
+     "value": "ვანილის მოხარშული კრემი"
+    }
+   ]
+  },
+  {
+   "id": 215,
+   "category_id": 126,
+   "sub_id": 147,
+   "name": "ეკლერი",
+   "price": 3.3,
+   "price_old": 0,
+   "image": "3fdfdc73f62cb281311da1d4214c53f7.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, ნაღები რძის, კარაქი, შაქარი, რძე აღდგენილი(წყალი,მშრ.რძე) კვერცხი, შოკოლადის სარკალი თხილით, </span>ვანილი, რომი, კონიაკი, მარილი, 100გ პროდუქტის კვებ ღირებ: ცილა 6გ, ცხიმი 19გ ნახშირწყალი 39 გ. 351კკალ/1474კჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "შუ ეკლერი",
+   "gallery": [
+    "9e5414ba800b85f5153b67b33beb52f5.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "შოკოლადის მინანქარი"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის მოხარშული კრემი"
+    }
+   ]
+  },
+  {
+   "id": 352,
+   "category_id": 126,
+   "sub_id": 147,
+   "name": "ყავის ეკლერი",
+   "price": 3.4,
+   "price_old": 0,
+   "image": "3db37d1d31c6bf8da03b1a893c031603.jpg",
+   "text": "<p>&nbsp;ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, ნაღები რძის, კარაქი, </span>შაქარი,&nbsp; რძე <span style=\"text-decoration: underline;\">აღდგენილი(წყალი,მშრ.რძე) კვერცხი, ყავა, ლიოქიორი ყავის, არაჟანი, შესქელებული რძე, თხილი,&nbsp; შოკოლადის სარკალი თხილით, </span>ვანილი, მარილი, 100გ პროდუქტის კვებ ღირებ: ცილა 6გ, ცხიმი 19გ ნახშირწყალი 39 გ. 351 კკალ/14742კჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "შუ ეკლერი",
+   "gallery": [
+    "290e66c90a5db8585b0bd620072a1aa5.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "შოკოლადის სარკალი თხილით"
+    },
+    {
+     "name": "კრემი",
+     "value": "ყავის კრემი"
+    }
+   ]
+  },
+  {
+   "id": 315,
+   "category_id": 126,
+   "sub_id": 185,
+   "name": "ხვეულა",
+   "price": 3.4,
+   "price_old": 0,
+   "image": "0144cfafe4944eb45201d6d57df41a1d.jpg",
+   "text": "<p>&nbsp;ინგრედიენტყები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის</span>, შაქარი, <span style=\"text-decoration: underline;\">მარგარინი, კარაქი, კვერცხი, ნაღები მცენარეული,</span> რძე აღდგენილი, კონიაკი, მჟავიანობის რეგულატორი ლიმონმჟავა, ვანილი, ძმარი, კ<span style=\"text-decoration: underline;\">ვერცხის სარკალი,</span> მარილი. 100გ პროდუქტ. კვებითი ღირებ.: ცილა 7გ. ცხიმი 19გ. ნახშირწყალი 40 გ. 359კკალ/1507კჯ.</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ხვეულა",
+   "gallery": [
+    "e3fe16cf045e3ea990630086917ed936.jpg"
+   ],
+   "specs": [
+    {
+     "name": "კრემი",
+     "value": "ვანილის მოხარშული კრემი"
+    }
+   ]
+  },
+  {
+   "id": 423,
+   "category_id": 126,
+   "sub_id": 196,
+   "name": "ჟოლოს ტარტალეტკა",
+   "price": 3.7,
+   "price_old": 0,
+   "image": "e7a1aaf41c6440cd6b5f6a40348ae069.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, კვერცხი, კარაქი, შაქარი, რძე აღდგენილი, ნაღები, ჟოლო,&nbsp;</span> რომი, კონიაკი, მარილი, ვანილი.100გ პროდუქტ. კვებითი ღირებ.: ცილა 6გ. ცხიმი19გ. ნახშირწყალი 29გ. 307კკალ/1289კჯ.</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ტარტალეტკა",
+   "gallery": [
+    "db216e4b0de256320c190ea8a92028bc.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "ჟოლო"
+    },
+    {
+     "name": "ხილი",
+     "value": "ჟოლო"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის მოხარშული კრემი"
+    }
+   ]
+  },
+  {
+   "id": 333,
+   "category_id": 126,
+   "sub_id": 196,
+   "name": "მარწყვის ტარტალეტკა",
+   "price": 3.7,
+   "price_old": 0,
+   "image": "5c85b5357ee7395d3a006c6ebcd3d580.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, კვერცხი, კარაქი, შაქარი, რძე აღდგენილი, ნაღები, მარწყვი,</span> რომი, კონიაკი, მარილი, ვანილი.100გ პროდუქტ. კვებითი ღირებ.: ცილა 6გ. ცხიმი19გ. ნახშირწყალი 29გ. 307კკალ/1289კჯ.</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ტარტალეტკა",
+   "gallery": [
+    "d8aa0964ccad4f76c4ce3304ddb5f435.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "მარწყვი"
+    },
+    {
+     "name": "ხილი",
+     "value": "მარწყვი"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის მოხარშული კრემი"
+    }
+   ]
+  },
+  {
+   "id": 329,
+   "category_id": 126,
+   "sub_id": 197,
+   "name": "თეთრი ციყვი",
+   "price": 4.4,
+   "price_old": 0,
+   "image": "fae58f9c885284fe0b787350b8faae4c.jpg",
+   "text": "<p>ინგრედიენტები: ფ<span style=\"text-decoration: underline;\">ქვილი ხორბლის უ/ხ, ნაღები რძის, მაწონი, შაქრის პუდრა, კარაქი 82%, რძე აღდგენილი (წყალი, მშრალი რძე), კვერცხი,</span> არაჟანი, შესქელებული რძე, <span style=\"text-decoration: underline;\">შოკოლადი თეთრი, კაკაოს ცხიმი, რომი, კონიაკი,&nbsp;</span> გამაფხვიერებელი, სოდა, მარილი, ვანილი, 100გპროდ. კვებითი ღირებ:ცილა 6 გ, ცხიმი 18გ (ნაჯერი 5გ),ნახშირწყალი 39გ.(მათ შორის შაქრები 7გ) ენერგეტ. ღირებ: 342/კკალ1436კჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ციყვი",
+   "gallery": [
+    "97fdc6597d09468080fbcc785c49ebad.jpg"
+   ],
+   "specs": [
+    {
+     "name": "დეკორი",
+     "value": "თხილი"
+    },
+    {
+     "name": "კრემი",
+     "value": "მოხარშული კრემი ნაღებით"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "თეთრი"
+    }
+   ]
+  },
+  {
+   "id": 354,
+   "category_id": 126,
+   "sub_id": 197,
+   "name": "ციყვი ყავის კრემით",
+   "price": 5,
+   "price_old": 0,
+   "image": "d1d8df92b02f93be9350ba857c0894ec.jpg",
+   "text": "<p>ინგრედიენტები: ფ<span style=\"text-decoration: underline;\">ქვილი ხორბლის უ/ხ, ნაღები რძის, მაწონი, შაქრის პუდრა, კარაქი 82%, რძე აღდგენილი (წყალი, მშრალი რძე), კვერცხი,</span> <span style=\"text-decoration: underline;\">არაჟანი, შესქელებული რძე, შოკოლადი(კაკაო, ნაღები, კაკაოს ცხიმი), კაკაო, ყავა, რომი, კონიაკი,&nbsp;</span> გამაფხვიერებელი, სოდა, მარილი, ვანილი, 100გ პროდ. კვებითი ღირებულება: ცილა 6 გ ცხიმი 19გ(ნაჯერი 7გ), ნახშ.38გ (შაქრები 14გ) ენერგეტ. ღირებ: 347/კკალ1457კჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ციყვი",
+   "gallery": [
+    "bd88c21884fef28d8b9ebfd9205842bf.jpg"
+   ],
+   "specs": [
+    {
+     "name": "კრემი",
+     "value": "ყავის კრემი"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "შავი"
+    }
+   ]
+  },
+  {
+   "id": 748,
+   "category_id": 126,
+   "sub_id": 228,
+   "name": "აკორდი",
+   "price": 6.5,
+   "price_old": 0,
+   "image": "43b7c6204193bddd92980fb2aa167101.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის უ/ხ</span>, შაქარი, <span style=\"text-decoration: underline;\">კვერცხი, მოხარშული შესქელებული რძე,</span> <span style=\"text-decoration: underline;\">რძის ნაღები, </span><span style=\"text-decoration: underline;\">თაფლი, კაკაო,</span> ყავა, სოდა,<span style=\"text-decoration: underline;\"> ნიგოზი</span>, მარილი, ვანილი 100გ პროდუქტის კვები. ღირებ : ცილა 8გ,ცხიმი 15გ, ნახშირწყ. 40 გ ენერგეტ. ღირებ: 327/კკალ1373კჯ</p>",
+   "pieces": "",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აკორდი",
+   "gallery": [
+    "04b7cda6f7cf33711c11df3b9f6ad15d.jpg",
+    "0124136dae2d2164607935c55d06893a.png"
+   ],
+   "specs": [
+    {
+     "name": "ნაჭრის ზომა",
+     "value": "9 სმ x 5 სმ"
+    },
+    {
+     "name": "დეკორი",
+     "value": "გახეხილი ნიგოზი, დეკორატიული კაკაო"
+    },
+    {
+     "name": "კრემი",
+     "value": "მოხარშული შედედებული რძით"
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "თეთრი ბისკვიტი , ყავის ბისკვიტი ,შოკოლადია ბისკვიტი"
+    },
+    {
+     "name": "ფირფიტა",
+     "value": "ფირფიტა 12 ნაჭრიანი"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "ნიგოზი"
+    }
+   ]
+  },
+  {
+   "id": 743,
+   "category_id": 126,
+   "sub_id": 188,
+   "name": "რაფაელო",
+   "price": 7.9,
+   "price_old": 0,
+   "image": "7d50dd7246427887545922d63bebddc8.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, </span>შაქარი<span style=\"text-decoration: underline;\">,</span><span style=\"text-decoration: underline;\"> რძე აღდგენილი,  რძის ნაღები, კვერცხი, კარაქი, თაფლი, შესქელებული რძე, თეთრი შოკოლადი, </span> სოდა,<span style=\"text-decoration: underline;\"> ნუში, ნუშის ლიქიორი</span>, ქოქოსის ფანტელი,  ვანილი, მარილი, 100გ პროდ. კვებითი ღირებ.: ცილა 8გ ცხიმი  20გ. ნახშირწყალი 44გ. 388კკალ/1630ჯ.</p>",
+   "pieces": "",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "რაფაელო",
+   "gallery": [
+    "3b8c9324defed287bc163d8aa0be8a41.jpg",
+    "2b13b53ddc5e12b896a2c9f450681d13.png"
+   ],
+   "specs": [
+    {
+     "name": "ნაჭრის ზომა",
+     "value": "9 სმ x 5 სმ"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის კრემ-სუფლე ,  შუ ვანილის კრემით."
+    },
+    {
+     "name": "ბისკვიტი",
+     "value": "ქოქოსის ბისკვიტი"
+    },
+    {
+     "name": "ფირფიტა",
+     "value": "ფირფიტა 12 ნაჭრიანი"
+    }
+   ]
+  },
+  {
+   "id": 269,
+   "category_id": 126,
+   "sub_id": 142,
+   "name": "იდეალი",
+   "price": 5.9,
+   "price_old": 0,
+   "image": "d7a1b11780a4eb9473cf9f44b0501bc6.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის</span>, შაქარი, <span style=\"text-decoration: underline;\">კვერცხი, კარაქი, მოხარშული შესქელებული რძე, ნაღები რძის, არაჟანი, რომი, </span>სოდა,<span style=\"text-decoration: underline;\"> თაფლი, ნიგოზი</span>. 100გ პროდუქტ. კვებითი ღირებ.: ცილა 6გ. ცხიმი 19გ. ნახშირწყალი 39გ. 351კკალ/1474კჯ.</p>",
+   "pieces": "1",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "იდეალი",
+   "gallery": [
+    "b902cdda5c4c50ba719b39465d1eae9f.jpg",
+    "25e48569d17d4bf51ef82d93c1fcfabe.png"
+   ],
+   "specs": [
+    {
+     "name": "ნაჭრის ზომა",
+     "value": "9 სმ x 5 სმ"
+    },
+    {
+     "name": "კრემი",
+     "value": "კრემი მოხარშული შედედებული რძით"
+    },
+    {
+     "name": "ფირფიტა",
+     "value": "თაფლის. ფირფიტა 12 ნაჭრიანი"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "ნიგოზი"
+    }
+   ]
+  },
+  {
+   "id": 228,
+   "category_id": 126,
+   "sub_id": 162,
+   "name": "მედოკი ნაღების კრემით",
+   "price": 5.9,
+   "price_old": 0,
+   "image": "cdd6d43053dd1733f283c7bc4f13e617.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის</span>, შაქარი, <span style=\"text-decoration: underline;\">კარაქი, კვერცხი, თაფლი, რძის ნაღები, შესქელებული რძე, არაჟანი, რომი, კონიაკი, აღდგენილი რძე </span>(სასმელი წყალი, მშრალი რძე), მარილი, სოდა, ვანილი. 100გ პროდუქტ. კვებითი ღირებ.: ცილა 6გ. ცხიმი 19გ. ნახშირწყალი 39გ. 351კკალ/1474ჯ.</p>",
+   "pieces": "1",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "მედოკი",
+   "gallery": [
+    "42334e993c0ddefbc3fab2b7db7440f1.jpg",
+    "42334e993c0ddefbc3fab2b7db7440f1.png"
+   ],
+   "specs": [
+    {
+     "name": "ნაჭრის ზომა",
+     "value": "9 სმ x 5 სმ"
+    },
+    {
+     "name": "კრემი",
+     "value": "მოხარშული კრემი ნაღებით"
+    },
+    {
+     "name": "ფირფიტა",
+     "value": "თაფლის. ფირფიტა 12 ნაჭრიანი"
+    }
+   ]
+  },
+  {
+   "id": 404,
+   "category_id": 126,
+   "sub_id": 212,
+   "name": "ჩიტის რძე",
+   "price": 5.9,
+   "price_old": 0,
+   "image": "e15f1a88a885edda842d9a277eacd6d5.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის, </span>შაქარი<span style=\"text-decoration: underline;\">, რძის ნაღები, კვერცხი, კარაქი, კაკაო, თაფლი, შესქელებული რძე, არაჟანი, შავი შოკოლადი, რომი.</span> სოდა, ვანილი, მარილი, 100გ პროდ. კვებითი ღირებ.: ცილა 6გ ცხიმი 18გ. ნახშირწყალი 38გ. 338კკალ/1419ჯ.</p>",
+   "pieces": "1",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ჩიტის რძე",
+   "gallery": [
+    "b2d9d94451775a69892a30ab489dbf85.jpg",
+    "af71ad6dc1c5c80d0c1dd81e4576e484.png"
+   ],
+   "specs": [
+    {
+     "name": "ნაჭრის ზომა",
+     "value": "9 სმ x 5 სმ"
+    },
+    {
+     "name": "დეკორი",
+     "value": "შოკოლადის მინანქარი"
+    },
+    {
+     "name": "კრემი",
+     "value": "მოხარშული კრემი ნაღებით"
+    },
+    {
+     "name": "ფირფიტა",
+     "value": "თეთრი ფირფიტა, ფირფიტა 12 ნაჭრიანი"
+    }
+   ]
+  },
+  {
+   "id": 725,
+   "category_id": 126,
+   "sub_id": 126,
+   "name": "სნიკერსი",
+   "price": 5.9,
+   "price_old": 0,
+   "image": "4028e1f7d7bc6b8a5de8801f3a8bc423.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის უ/ხ</span>, შაქარი, <span style=\"text-decoration: underline;\">კარაქი 82%, კვერცხი, კაკაო, შოკოლადი, მოხარშული შესქელებული რძე,</span> <span style=\"text-decoration: underline;\">რძის ნაღები, არაჟანი, </span>შ<span style=\"text-decoration: underline;\">ესქელებული რძე, მიწისთხილი, </span>ყავა<span style=\"text-decoration: underline;\">,</span> <span style=\"text-decoration: underline;\">თაფლი,</span> სოდა, მარილი, ვანილი 100გ პროდუქტის კვები. ღირებ : ცილა 6 გ,ცხიმი 20გ, ნახშირწყ. 40 გ ენერგეტ. ღირებ: 364/კკალ1528კჯ</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ნამცხვრები",
+   "gallery": [
+    "cfb7096f8e1124281d7404ba474db225.jpg",
+    "905de561206f8a7e2062083aa2afaefe.png"
+   ],
+   "specs": [
+    {
+     "name": "ნაჭრის ზომა",
+     "value": "9 სმ x 5 სმ"
+    },
+    {
+     "name": "კრემი",
+     "value": "კრემი მოხარშული შედედებული რძით"
+    },
+    {
+     "name": "ფირფიტა",
+     "value": "სნიკერსის ფირფიტა ბეზეთი. ფირფიტა 12 ნაჭრიანი"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "მიწის თხილი"
+    }
+   ]
+  },
+  {
+   "id": 208,
+   "category_id": 127,
+   "sub_id": 136,
+   "name": "ხაჭაპური 1 ნაჭერი",
+   "price": 6.5,
+   "price_old": 0,
+   "image": "e71b4066cc3c60127446a56002a07844.jpg",
+   "text": "<p>&nbsp;ინგრედიენტები: <span style=\"text-decoration: underline;\">ხორბლის ფქვილი უმაღლესი ხარისხის, ყველი 55%, </span><span style=\"text-decoration: underline;\">მარგარინი,&nbsp; </span>ზეთი მზესუმზირის რაფინირებული, კ<span style=\"text-decoration: underline;\">ვერცხის სარკალი(კვერცხი, არაჟანი)</span> მარილი, საფუარი. 100გ პროდუქტ. კვებითი ღირებ.: ცილა 6გ. ცხიმი 19გ. ნახშირწყალი 36გ. კკალ3391423კჯ.</p>",
+   "pieces": "1",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ხაჭაპური",
+   "gallery": [
+    "5cceb0f1edca6d8b63e90eac3f858f3c.jpg"
+   ],
+   "specs": [
+    {
+     "name": "ნაჭრის ზომა",
+     "value": "12,5სმ/12,5სმ"
+    },
+    {
+     "name": "ფირფიტის ზომა",
+     "value": "25/25სმ"
+    },
+    {
+     "name": "ფირფიტა",
+     "value": "ფირფიტა 4 ნაჭრიანი"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "ყველი"
+    },
+    {
+     "name": "ცომი",
+     "value": "ნახევრად ფენოვანი"
+    }
+   ]
+  },
+  {
+   "id": 209,
+   "category_id": 127,
+   "sub_id": 137,
+   "name": "ლობიანი 1 ნაჭერი",
+   "price": 4.6,
+   "price_old": 0,
+   "image": "087dbae1724570245f3f42c2372f7c99.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ხორბლის ფქვილი უმაღლესი ხარისხის</span>, ლობიო 45% მარგარინი მცენარეული, ზეთი(მზესუმზირის, რაფინირებული), საფუარი, მარილი. 100გ პროდუქტ. კვებითი ღირებ.: ცილა 7გ. ცხიმი 14 გ. ნახშირწყალი 34 გ. 290კკალ/1218კჯ.</p>",
+   "pieces": "1",
+   "unit_type": "2",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ლობიანი",
+   "gallery": [
+    "67e13a3cfdc860d8f454b9d4b6e8708b.jpg"
+   ],
+   "specs": [
+    {
+     "name": "ნაჭრის ზომა",
+     "value": "12,5სმ/12,5სმ"
+    },
+    {
+     "name": "ფირფიტის ზომა",
+     "value": "25/25სმ"
+    },
+    {
+     "name": "ფირფიტა",
+     "value": "ფირფიტა 4  ნაჭრიანი"
+    },
+    {
+     "name": "შიგთავსი",
+     "value": "ლობიო (სამარხვო)"
+    },
+    {
+     "name": "ცომი",
+     "value": "ნახევრად ფენოვანი (სამარხვო)"
+    }
+   ]
+  },
+  {
+   "id": 173,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "შუშხუნა 1ც",
+   "price": 3,
+   "price_old": 0,
+   "image": "34b695e4b926910400f9d6eb5c3b04b2.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 410,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ვარსკვლავი ჩხირზე ვარდისფერი 4ც",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "937c958b3f714c4ac06989a8babb0d30.jpg",
+   "text": "",
+   "pieces": "4",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 560,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ვარსკვლავი ჩხირზე ლურჯი 4ც",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "facdc25f3c6a54ed0cc2de3e8eaf45bd.jpg",
+   "text": "",
+   "pieces": "",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 558,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი  ვარსკვლავი ჩხირზე წითელი 4ც",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "029c039888d07b46581ec7ebeee46b48.jpg",
+   "text": "",
+   "pieces": "4",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 699,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ვარსკვლავი ჩხირზე ვერცხლისფერი 4ც",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "86f1a2e8e84e5aac083a6743d51da49b.jpg",
+   "text": "",
+   "pieces": "4",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 700,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი გული ჩხირზე ვარდისფერი 4ც",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "c73fc74af2fb7e3cc8e338351bf852a8.jpg",
+   "text": "",
+   "pieces": "4",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 636,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი გული ჩხირზე ლურჯი 4ც",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "4ec0b586ab6e887993793c8a6148ef53.jpg",
+   "text": "",
+   "pieces": "4",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 393,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი გული ჩხირზე ვერცხლისფერი 4ც",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "1c40b2847d5af7efcb8168167f68c02e.jpg",
+   "text": "",
+   "pieces": "4",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 611,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი  ვერცხლისფერი 0",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "df51750df67cae84d5ea0b2630c631e4.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 612,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ვერცხლისფერი 1",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "2b3e8415d74886026fafe2b75f908f6b.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 613,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ვერცხლისფერი 2",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "4bf38956f185fa8dd8f325cb565fa5b5.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 614,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ვერცხლისფერი 3",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "72a5a413ccf731cfe377dc6a66ffba24.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 615,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ვერცხლისფერი 4",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "30148e8e9ff7cbf773fe16661a9ead24.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 616,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ვერცხლისფერი 5",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "b486bfdfb3792afc5081236213a2445b.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 617,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ვერცხლისფერი 6",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "eea510f65a0ad539f2683b63204804a7.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 618,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ვერცხლისფერი 7",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "5fbcda1ee974d6dec53e95adb7e84aa4.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 619,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ვერცხლისფერი 8",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "8632b1179666504e634f448651d2f559.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 620,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ვერცხლისფერი 9",
+   "price": 2.5,
+   "price_old": 0.01,
+   "image": "fe2041e0d78d7268bdcd9110d96aa36e.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 602,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 0",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "5458013d9cb148296ae73bd89db96b54.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 601,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 1",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "870d8a675cd5baac3c24113ab3a51caf.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 603,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 2",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "2d41cfe067d726017b67ae39af2bb7a1.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 604,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 3",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "ba28560405b0549014b7c1e6f5d1806b.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 605,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 4",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "1abebc04b158d700781be554ee7dbb19.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 606,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 5",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "38a080222dfd4c7a3ca76a1e749c4c77.jpg",
+   "text": "",
+   "pieces": "",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 607,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 6",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "1828f603bbc727a5d93a745c0fedc1ff.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 608,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 7",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "8a5a35f5822f7f57d388e306c3581b8e.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 609,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 8",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "7c008ac632b3c3ebf150a49eb0a0aa0a.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 610,
+   "category_id": 129,
+   "sub_id": 129,
+   "name": "სანთელი ციფრი ოქროსფერი 9",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "55cf4c0e8c694a9073a87ef527e727cc.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "აქსესუარები",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 485,
+   "category_id": 205,
+   "sub_id": 205,
+   "name": "ხაჭაპურის და ლობიანის ბოქსი",
+   "price": 44.4,
+   "price_old": 0,
+   "image": "926eb24094b9ea452ca63b80f2fea4ac.jpg",
+   "text": "<p>ალერგენები ფქვილი ხორბლის, კარაქი, კვერცხი, ყველი,ლობიო, ზეთი მზესუმზ. მარგარინი, მაწონი, 100პროდუქტ. კვებითი ღირებ.: ცილა 5გ. ცხიმი18გ(ნაჯერი 8). ნახშირწყალი 30 გ(შაქრები 11). 302კკალ/1268კჯ</p>",
+   "pieces": "",
+   "unit_type": "4",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ბოქსები",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "ხაჭაპური",
+     "value": "1 ფირფიტა"
+    },
+    {
+     "name": "ლობიანი",
+     "value": "1 ფირფიტა"
+    },
+    {
+     "name": "ფირფიტა",
+     "value": "ფირფიტა 4 ნაჭრიანი"
+    },
+    {
+     "name": "ცომი",
+     "value": "ნახევრად ფენოვანი"
+    }
+   ]
+  },
+  {
+   "id": 727,
+   "category_id": 205,
+   "sub_id": 205,
+   "name": "ნამცხვრის პატარა ბოქსი",
+   "price": 49.8,
+   "price_old": 0,
+   "image": "13f102d984a148a146d4f6c342951b92.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის,რძის ნაღები, კარაქი,  კვერცხი,  არაჟანი, კაკაო, შესქელებული რძე, მოხარშული შესქ. რძე, ნაღები, ნიგოზი, შოკოლადი, თეთრი შოკოლადი,შავი, ნუში, ნუშის ლიქიორი, მასკარპონე,  არაქისი, თაფლი, რომი</span>, ყავა ,სოდა, ვანილის ექსტრაქტი, მარილი,100გ პროდ. კვებითი ღირებ.: ცილა 11 გ ცხიმი 17გ. ნახშირწყალი 44გ. 373კალ/1567კჯ.</p>",
+   "pieces": "6",
+   "unit_type": "2",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ბოქსები",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "რაფაელო",
+     "value": "2"
+    },
+    {
+     "name": "ტირამისუ",
+     "value": "2"
+    },
+    {
+     "name": "აკორდი",
+     "value": "2"
+    }
+   ]
+  },
+  {
+   "id": 596,
+   "category_id": 205,
+   "sub_id": 205,
+   "name": "ნამცხვრის საშუალო ბოქსი",
+   "price": 60.2,
+   "price_old": 0,
+   "image": "0d30add744fac624c3eb6fe879550a5a.jpg",
+   "text": "<p>ინგრედიენტები: <span style=\"text-decoration: underline;\">ფქვილი ხორბლის,რძის ნაღები, კარაქი,  კვერცხი,  არაჟანი, კაკაო, შესქელებული რძე, მოხარშული შესქ. რძე, ნაღები, ნიგოზი, შოკოლადი, თეთრი შოკოლადი,შავი, ნუში, ნუშის ლიქიორი, მასკარპონე,  არაქისი, თაფლი, რომი</span>, ყავა სოდა, ვანილი, მარილი,100გ პროდ. კვებითი ღირებ.: ცილა 12 გ ცხიმი 17გ. ნახშირწყალი 46გ. 381კალ/1600კჯ</p>",
+   "pieces": "10",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ბოქსები",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "ჩიტის რძე",
+     "value": "2"
+    },
+    {
+     "name": "იდეალი",
+     "value": "2"
+    },
+    {
+     "name": "სნიკერსი",
+     "value": "2"
+    },
+    {
+     "name": "მედოკი ნაღების კრემით",
+     "value": "2"
+    },
+    {
+     "name": "აკორდი",
+     "value": "2"
+    }
+   ]
+  },
+  {
+   "id": 488,
+   "category_id": 205,
+   "sub_id": 205,
+   "name": "შუ-ეკლერის ბოქსი",
+   "price": 48.8,
+   "price_old": 0,
+   "image": "c0255b174e045121813aa9fa61d5d4b1.jpg",
+   "text": "<p>ალერგენები: ფქვილი ხორბლის, კარაქი, კვერცხი, რძე აღდგენილი(მშრალი რძე, სასმელი წყალი), ნაღები, შოკოლადის სარკალი თხილით. 100გ კვებითი ღირებ.: ცილა 7 გ. ცხიმი 23გ(ნაჯერი 9). ნახშირწყალი 30 გ(შაქრები 11). 3452კკალ/1478კჯ</p>",
+   "pieces": "15",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ბოქსები",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "ხვეულა",
+     "value": "3 ცალი"
+    },
+    {
+     "name": "ეკლერი",
+     "value": "7 ცალი"
+    },
+    {
+     "name": "შუ",
+     "value": "5 ცალი"
+    },
+    {
+     "name": "კრემი",
+     "value": "ვანილის მოხარშული კრემი"
+    }
+   ]
+  },
+  {
+   "id": 593,
+   "category_id": 205,
+   "sub_id": 205,
+   "name": "შუ-ეკლერის ბოქსი N2",
+   "price": 48.5,
+   "price_old": 0,
+   "image": "53bc41e7e7751e5584ba8815867d2608.jpg",
+   "text": "<p>ალერგენები: ფქვილი ხორბლის, კარაქი, კვერცხი, რძე აღდგენილი(მშრალი რძე, სასმელი წყალი), ნაღები, შოკოლადის სარკალი თხილით. 100გ კვებითი ღირებ.: ცილა 7 გ. ცხიმი 22გ(ნაჯერი 9 ). ნახშირწყალი 29 გ(შაქრები 11). 342კკალ/1436კჯ</p>",
+   "pieces": "",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ბოქსები",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "ეკლერი",
+     "value": "10"
+    },
+    {
+     "name": "შუ",
+     "value": "5"
+    }
+   ]
+  },
+  {
+   "id": 550,
+   "category_id": 205,
+   "sub_id": 205,
+   "name": "ყავის და ვანილის ეკლერის ბოქსი",
+   "price": 40,
+   "price_old": 0,
+   "image": "05c16dce57fac1cad263af2a71de1ba4.jpg",
+   "text": "<p>ალერგენები: ფქვილი ხორბლის, ნაღები რძის, კარაქი, რძე აღდგენილი(წყალი,მშრ.რძე) კვერცხი, შოკოლადის სარკალი თხილის არომატით, ვანილი, 100გ პროდუქტის კვებ ღირებ: ცილა 5გ, ცხიმი 19გ ნახშირწყალი 30 გ. 308კკალ/1293კჯ</p>",
+   "pieces": "12",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ბოქსები",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "ყავის ეკლერი",
+     "value": "4"
+    },
+    {
+     "name": "ეკლერი",
+     "value": "8"
+    }
+   ]
+  },
+  {
+   "id": 730,
+   "category_id": 208,
+   "sub_id": 208,
+   "name": "ლაღიძის წყალი შოკოლადი 0.5ლ",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "f080778f49511c82d6f4fd007999e144.jpg",
+   "text": "",
+   "pieces": "",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "სასმელები",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "არომატი",
+     "value": "შოკოლადი"
+    }
+   ]
+  },
+  {
+   "id": 728,
+   "category_id": 208,
+   "sub_id": 208,
+   "name": "ლაღიძის წყალი ნაღები 0.5ლ",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "2b067bea16e891b99b7da968cd4ef277.jpg",
+   "text": "",
+   "pieces": "",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "სასმელები",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "არომატი",
+     "value": "ნაღები"
+    }
+   ]
+  },
+  {
+   "id": 729,
+   "category_id": 208,
+   "sub_id": 208,
+   "name": "ლაღიძის წყალი ტარხუნა 0.5ლ",
+   "price": 3.5,
+   "price_old": 0,
+   "image": "d81a2c9e4db961b11fcb2d962cfd8403.jpg",
+   "text": "",
+   "pieces": "",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "სასმელები",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "არომატი",
+     "value": "ტარხუნა"
+    }
+   ]
+  },
+  {
+   "id": 537,
+   "category_id": 208,
+   "sub_id": 213,
+   "name": "ლაღიძის წყალი შოკოლადი 1.5ლ",
+   "price": 6.9,
+   "price_old": 0,
+   "image": "5d4230c691ab80c2351bd209c4f1d692.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ლაღიძის წყალი",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "არომატი",
+     "value": "შოკოლადი"
+    }
+   ]
+  },
+  {
+   "id": 536,
+   "category_id": 208,
+   "sub_id": 213,
+   "name": "ლაღიძის წყალი ნაღები 1.5ლ",
+   "price": 6.9,
+   "price_old": 0,
+   "image": "b51f249e4b92e84428a2dc44004dd6f1.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ლაღიძის წყალი",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "არომატი",
+     "value": "ნაღები"
+    }
+   ]
+  },
+  {
+   "id": 539,
+   "category_id": 208,
+   "sub_id": 213,
+   "name": "ლაღიძის წყალი შოკოლადი ნაღებით 1.5ლ",
+   "price": 6.9,
+   "price_old": 0,
+   "image": "d522d1b0efbe4740be3b6fb5de6e3830.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ლაღიძის წყალი",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "არომატი",
+     "value": "შოკოლადი ნაღებით"
+    }
+   ]
+  },
+  {
+   "id": 538,
+   "category_id": 208,
+   "sub_id": 213,
+   "name": "ლაღიძის წყალი ტარხუნა 1.5ლ",
+   "price": 6.9,
+   "price_old": 0,
+   "image": "c965a686aa98f52361b18a6b72f5f812.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ლაღიძის წყალი",
+   "gallery": [],
+   "specs": [
+    {
+     "name": "არომატი",
+     "value": "ტარხუნა"
+    }
+   ]
+  },
+  {
+   "id": 510,
+   "category_id": 208,
+   "sub_id": 214,
+   "name": "კოკა-კოლა/Coca-cola 1.5ლ",
+   "price": 4.2,
+   "price_old": 0,
+   "image": "efcf593c8446e38e84dd34a0b718a631.jpg",
+   "text": "<p>ალერგენები: ფქვ. ხორბლის, კვერცხი,</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "კოკა-კოლა/coca-cola",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 507,
+   "category_id": 208,
+   "sub_id": 214,
+   "name": "კოკა-კოლა შაქრის გარეშე/coca-cola zero 1.5ლ",
+   "price": 4.2,
+   "price_old": 0,
+   "image": "93c2d7d8ba29fe75d0da831a06c0d1f1.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "კოკა-კოლა/coca-cola",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 505,
+   "category_id": 208,
+   "sub_id": 214,
+   "name": "კოკა-კოლა/coca-cola 0.5ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "04850d280e12e28c1f12da5986e3befc.jpg",
+   "text": "<p>ალერგენები: ფქვ. ხორბლის, კვერცხი,</p>",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "კოკა-კოლა/coca-cola",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 506,
+   "category_id": 208,
+   "sub_id": 214,
+   "name": "კოკა-კოლა შაქრის გარეშე/coca-cola zero 0.5ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "8157229b5836ac3f92db82bb32c756f2.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "კოკა-კოლა/coca-cola",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 509,
+   "category_id": 208,
+   "sub_id": 214,
+   "name": "კოკა-კოლა ქილა/cola-cola 0.33ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "3ff1d83e161ab55ecae53c0a1657013a.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "კოკა-კოლა/coca-cola",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 508,
+   "category_id": 208,
+   "sub_id": 214,
+   "name": "კოკა-კოლა შაქრის გარეშე ქილა/coca-cola zero 0.33ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "dc1ad24281d5d559502d31b72591e9a5.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "კოკა-კოლა/coca-cola",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 522,
+   "category_id": 208,
+   "sub_id": 216,
+   "name": "ფანტა/fanta 1.5ლ",
+   "price": 4.2,
+   "price_old": 0,
+   "image": "1dd93bc9876bcb095a06ffe2229bca89.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ფანტა/fanta",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 525,
+   "category_id": 208,
+   "sub_id": 216,
+   "name": "ფანტა/fanta 0.5ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "6d436caed7d13018d6a9d9258317ead1.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ფანტა/fanta",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 524,
+   "category_id": 208,
+   "sub_id": 216,
+   "name": "ფანტა ტროპიკი/fanta 0.5ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "c824cab81b07d022dbf528a4e9fda45a.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "1",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ფანტა/fanta",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 523,
+   "category_id": 208,
+   "sub_id": 216,
+   "name": "ფანტა ქილა/fanta 0.33ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "bcf2c0071a8c9f1cba29bf37fa4f2f54.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ფანტა/fanta",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 513,
+   "category_id": 208,
+   "sub_id": 215,
+   "name": "სპრაიტი/sprite 0.5ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "baf1f3abc3b7cfa331cfefc5b856585f.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "სპრაიტი/sprite",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 511,
+   "category_id": 208,
+   "sub_id": 215,
+   "name": "სპრაიტი ქილა/sprite 0.33ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "1e0e5d2e9d4ae1cb622dbd92070e66aa.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "სპრაიტი/sprite",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 514,
+   "category_id": 208,
+   "sub_id": 219,
+   "name": "მთის წყალი 0.5ლ",
+   "price": 1,
+   "price_old": 0,
+   "image": "5df936155314faf12428a594ac0cae8a.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "წყალი",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 518,
+   "category_id": 208,
+   "sub_id": 218,
+   "name": "ცივი ჩაი მანგო-ანანასი /FUSE TEA 0.5ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "adc2cce12aa4fca22c2d57c11c9c2173.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ცივი ჩაი/FUSE TEA",
+   "gallery": [],
+   "specs": []
+  },
+  {
+   "id": 520,
+   "category_id": 208,
+   "sub_id": 218,
+   "name": "ცივი ჩაი ატამი /FUSE TEA 0.5ლ",
+   "price": 2.5,
+   "price_old": 0,
+   "image": "d8843a67c44f571914eb93295b6e82bc.jpg",
+   "text": "",
+   "pieces": "1",
+   "unit_type": "1",
+   "active": "0",
+   "fasting": null,
+   "delivery_type": "0",
+   "sub_name": "ცივი ჩაი/FUSE TEA",
+   "gallery": [],
+   "specs": []
+  }
+ ],
+ "source": "https://madart.ge",
+ "fetched_at": "2026-09-18"
+}

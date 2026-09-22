@@ -1,0 +1,27 @@
+{
+  "name": "@madart/types",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared API contracts: request schemas (zod), response views and realtime event payloads.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@madart/domain": "workspace:*",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@madart/config": "workspace:*",
+    "eslint": "^9.36.0",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.44.0"
+  }
+}

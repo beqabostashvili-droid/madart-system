@@ -1,0 +1,19 @@
+packages:
+  - apps/*
+  - packages/*
+  - tools/*
+
+allowBuilds:
+  '@embedded-postgres/windows-x64': true
+  '@embedded-postgres/linux-x64': true
+  '@embedded-postgres/darwin-arm64': true
+  '@embedded-postgres/darwin-x64': true
+  embedded-postgres: true
+  '@prisma/engines': true
+  '@prisma/client': true
+  prisma: true
+  esbuild: true
+  electron: true
+  sharp: true
+  unrs-resolver: true
+  '@swc/core': true

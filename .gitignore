@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.next/
+out/
+.turbo/
+coverage/
+.local/
+*.log
+.env
+.env.local
+.env.*.local
+packages/database/src/generated/
+apps/*/release/
+.DS_Store
+Thumbs.db

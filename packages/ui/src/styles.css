@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap');
+/* Google Fonts import must precede every other rule (including Tailwind's). */
+@import 'tailwindcss';
+
+/* Components of this package live next to this file – scan them too. */
+@source './';
+
+/*
+ * MADART design tokens. Status colours are defined ONCE here (spec §14) and
+ * mirrored in tokens.ts for places that need raw values (canvas, inline svg).
+ */
+@theme static {
+  --font-sans: 'Noto Sans Georgian', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: #ffbb00;
+  --color-brand-dark: #e6a800;
+  --color-brand-ink: #1f1a0b;
+  --color-ink: #212529;
+  --color-ink-muted: #6c757d;
+  --color-surface: #ffffff;
+  --color-canvas: #f7f5f0;
+  --color-line: #e8e4dc;
+
+  --color-ok: #2f855a;
+  --color-ok-soft: #e6f4ea;
+  --color-warn: #d97706;
+  --color-warn-soft: #fef3c7;
+  --color-danger: #c53030;
+  --color-danger-soft: #fde8e8;
+  --color-info: #2b6cb0;
+  --color-info-soft: #e6f0fa;
+
+  /* production display statuses */
+  --color-status-scheduled: #64748b;
+  --color-status-starting-soon: #d97706;
+  --color-status-start-now: #2563eb;
+  --color-status-in-production: #7c3aed;
+  --color-status-late: #dc2626;
+  --color-status-ready: #16a34a;
+  --color-status-cancelled: #9ca3af;
+
+  --radius-card: 1rem;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.05), 0 4px 16px rgb(33 37 41 / 0.06);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-canvas);
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+  }
+  button {
+    font: inherit;
+  }
+  /* kiosk / touch: no text selection while tapping */
+  .touch-app {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+@layer utilities {
+  .card {
+    background: var(--color-surface);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--color-line);
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+}
+
+@keyframes madart-pop {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.animate-pop {
+  animation: madart-pop 220ms ease-out;
+}
+
+@keyframes madart-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(220 38 38 / 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgb(220 38 38 / 0);
+  }
+}
+.animate-late {
+  animation: madart-pulse-ring 1.4s ease-out infinite;
+}
+
+/* ───────────────────────── receipt paper (80 mm thermal slip) ───────────── */
+.receipt-paper {
+  width: 302px; /* 80 mm @ 96 dpi */
+  max-width: 100%;
+  background: #fff;
+  color: #111;
+  font-family: 'Courier New', ui-monospace, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.35;
+  box-shadow: 0 6px 24px rgb(0 0 0 / 0.15);
+  position: relative;
+}
+.receipt-paper-compact { font-size: 12px; width: 260px; }
+.receipt-body { padding: 14px 16px 18px; text-align: center; }
+.receipt-edge {
+  height: 10px;
+  background: radial-gradient(circle at 6px 0, transparent 6px, #fff 6.5px) top / 12px 10px repeat-x;
+}
+.receipt-edge-top { transform: rotate(180deg); }
+.receipt-brand { font-weight: 800; font-size: 22px; letter-spacing: 0.12em; }
+.receipt-muted { color: #555; font-size: 11px; }
+.receipt-kind { margin-top: 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+.receipt-number { font-size: 40px; font-weight: 800; letter-spacing: 0.08em; margin: 4px 0 2px; }
+.receipt-rule { border-top: 1px dashed #999; margin: 8px 0; }
+.receipt-lines { width: 100%; text-align: left; border-collapse: collapse; }
+.receipt-lines td { padding: 2px 0; vertical-align: top; }
+.receipt-qty { width: 34px; white-space: nowrap; }
+.receipt-name { word-break: break-word; }
+.receipt-amount { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.receipt-row { display: flex; justify-content: space-between; gap: 8px; }
+.receipt-total { font-weight: 800; font-size: 16px; margin-top: 2px; }
+.receipt-qr { display: flex; justify-content: center; margin: 12px 0 6px; }
+.receipt-qr img { width: 128px; height: 128px; image-rendering: pixelated; }
+.receipt-footer { font-size: 11px; margin-top: 4px; }
+
+/* Print only the receipt on 80 mm paper */
+@media print {
+  @page { size: 80mm auto; margin: 0; }
+  body * { visibility: hidden !important; }
+  .receipt-print, .receipt-print * { visibility: visible !important; }
+  .receipt-print { position: fixed; left: 0; top: 0; width: 80mm; margin: 0; }
+  .receipt-paper { box-shadow: none; width: 80mm; }
+  .receipt-edge { display: none; }
+}
