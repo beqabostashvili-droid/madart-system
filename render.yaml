@@ -8,7 +8,8 @@ services:
     plan: free
     region: frankfurt
     rootDir: .
-    buildCommand: npm install -g pnpm@11.20.0 && pnpm install --frozen-lockfile && pnpm turbo run build --filter=@madart/api...
+    # only the API's dependency graph is installed/built (no Electron/Next downloads on the server)
+    buildCommand: npm install -g pnpm@11.20.0 && pnpm install --frozen-lockfile --filter @madart/api... && pnpm turbo run build --filter=@madart/api...
     startCommand: pnpm --filter @madart/database migrate:deploy && node apps/api/dist/main.js
     healthCheckPath: /health
     envVars:
@@ -16,6 +17,10 @@ services:
         value: '24.19.0'
       - key: NODE_ENV
         value: production
+      - key: ELECTRON_SKIP_BINARY_DOWNLOAD
+        value: '1'
+      - key: PNPM_HOME
+        value: /opt/render/project/.pnpm
       - key: API_PORT
         value: '10000'
       - key: DATABASE_URL
