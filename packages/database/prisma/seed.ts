@@ -218,6 +218,33 @@ async function main() {
     if (!existing) await prisma.systemSetting.create({ data: { key, value: value as object } });
   }
 
+  console.log('[seed] promotions');
+  const promoCount = await prisma.promotion.count();
+  if (promoCount === 0) {
+    await prisma.promotion.createMany({
+      data: [
+        {
+          branchId: null,
+          titleKa: 'ახალი გემო: ხაჭაპური აჭარული',
+          titleEn: 'New: Acharuli Khachapuri',
+          subtitleKa: 'სცადეთ ჩვენი უახლესი შემატება',
+          subtitleEn: 'Try our newest addition',
+          imageUrl: 'https://madart.ge/thumb.php?img=product/926eb24094b9ea452ca63b80f2fea4ac.jpg&x=800&y=600&render=crop',
+          sortOrder: 1,
+        },
+        {
+          branchId: null,
+          titleKa: '−10% ტორტებზე შაბათ-კვირას',
+          titleEn: '−10% off cakes on weekends',
+          subtitleKa: 'შეკვეთა კიოსკზე ან მობილურით',
+          subtitleEn: 'Order via kiosk or mobile',
+          imageUrl: 'https://madart.ge/thumb.php?img=product/1c4c1d9688c77c8a3728d7a4c7e78b05.jpg&x=800&y=600&render=crop',
+          sortOrder: 2,
+        },
+      ],
+    });
+  }
+
   const output = {
     branchId: branch.id,
     stations: Object.fromEntries(stationByCode),

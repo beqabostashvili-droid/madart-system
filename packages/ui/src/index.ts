@@ -6,3 +6,4 @@ export * from './hooks';
 export * from './status';
 export * from './session';
 export * from './receipt';
+export * from './promo';

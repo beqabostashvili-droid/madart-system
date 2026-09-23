@@ -3,7 +3,7 @@ import type { ApiError } from '@madart/api-client';
 import type { BranchView, UserProfile } from '@madart/types';
 import { Button, Card, ConnectionBadge, cx, Input, SessionProvider, Spinner, ToastProvider, useConnectionState, useResource, useSession } from '@madart/ui';
 import { createContext, useContext, useEffect, useState } from 'react';
-import { CategoriesPage, ImportPage, ProductsPage } from './pages/catalog';
+import { CategoriesPage, ImportPage, ProductsPage, PromotionsPage } from './pages/catalog';
 import { DashboardPage, OrdersPage } from './pages/orders';
 import { AuditPage, BranchesPage, DevicesPage, RolesPage, SettingsPage, StationsPage, UsersPage } from './pages/organisation';
 
@@ -44,6 +44,7 @@ const NAV: { key: string; label: string; perm?: string; group: string }[] = [
   { key: 'products', label: 'Products', group: 'კატალოგი', perm: 'catalog.read' },
   { key: 'categories', label: 'Categories', group: 'კატალოგი', perm: 'catalog.read' },
   { key: 'import', label: 'Import (madart.ge)', group: 'კატალოგი', perm: 'catalog.import' },
+  { key: 'promotions', label: 'Promotions', group: 'კატალოგი', perm: 'catalog.read' },
   { key: 'branches', label: 'Branches', group: 'ორგანიზაცია', perm: 'branches.read' },
   { key: 'stations', label: 'Production Stations', group: 'ორგანიზაცია', perm: 'catalog.read' },
   { key: 'devices', label: 'Devices', group: 'ორგანიზაცია', perm: 'devices.read' },
@@ -141,6 +142,7 @@ function Shell() {
             {section === 'products' && <ProductsPage go={go} />}
             {section === 'categories' && <CategoriesPage />}
             {section === 'import' && <ImportPage />}
+            {section === 'promotions' && <PromotionsPage />}
             {section === 'branches' && <BranchesPage />}
             {section === 'stations' && <StationsPage />}
             {section === 'devices' && <DevicesPage />}

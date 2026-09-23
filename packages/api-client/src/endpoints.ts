@@ -1,5 +1,6 @@
 import type {
   AdminProductView,
+  AdminPromotionView,
   AuditLogView,
   BranchView,
   CatalogView,
@@ -11,6 +12,7 @@ import type {
   CreateOrderBody,
   CreateOrderResponse,
   CreateProductBody,
+  CreatePromotionBody,
   CreateStationBody,
   CreateUserBody,
   DashboardView,
@@ -34,6 +36,7 @@ import type {
   ProductionBoardView,
   ProductionConfigInput,
   ProductionTaskView,
+  PromotionView,
   RefundBody,
   RoleView,
   StationView,
@@ -42,6 +45,7 @@ import type {
   UpdateCategoryBody,
   UpdateDeviceBody,
   UpdateProductBody,
+  UpdatePromotionBody,
   UpdateStationBody,
   UpdateUserBody,
   UserProfile,
@@ -106,6 +110,15 @@ export function createApiClient(options: HttpOptions) {
       list: () => http.get<{ id: string; source: string; status: string; summary: unknown; warnings: string[]; createdAt: string; importedAt: string | null }[]>('/admin/catalog-imports'),
       preview: (source: 'MADART_GE' | 'JSON_SNAPSHOT' = 'MADART_GE') => http.post<ImportPreviewView>('/admin/catalog-imports/preview', { source }, { timeoutMs: 60_000 }),
       commit: (importId: string) => http.post<ImportResultView>(`/admin/catalog-imports/${importId}/commit`, {}, { timeoutMs: 60_000 }),
+    },
+
+    promotions: {
+      active: (branchId: string, channel: 'KIOSK' | 'MOBILE' = 'KIOSK', locale: 'ka' | 'en' | 'ru' = 'ka') =>
+        http.get<PromotionView[]>(`/promotions${qs({ branchId, channel, locale })}`),
+      list: (branchId?: string) => http.get<AdminPromotionView[]>(`/admin/promotions${qs({ branchId })}`),
+      create: (body: CreatePromotionBody) => http.post<AdminPromotionView>('/admin/promotions', body),
+      update: (id: string, body: UpdatePromotionBody) => http.patch<AdminPromotionView>(`/admin/promotions/${id}`, body),
+      remove: (id: string) => http.request<void>('DELETE', `/admin/promotions/${id}`),
     },
 
     devices: {

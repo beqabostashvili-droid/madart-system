@@ -1,6 +1,6 @@
 import { type ApiError, newIdempotencyKey } from '@madart/api-client';
 import type { Locale } from '@madart/domain';
-import type { CatalogView, CreateOrderResponse, DeviceProfile, PaymentView } from '@madart/types';
+import type { CatalogView, CreateOrderResponse, DeviceProfile, PaymentView, PromotionView } from '@madart/types';
 import { Button, ConnectionBadge, OfflineBanner, Spinner, useConnectionState, useResource, useSession, useToast } from '@madart/ui';
 import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
 import { cartReducer, cartTotal, type CartLine } from './cart';
@@ -28,6 +28,11 @@ export function App() {
 
   const device = useResource<DeviceProfile>(() => api.auth.device(), [token], { enabled: !!token });
   const catalog = useResource<CatalogView>(() => api.catalog.get(device.data!.branchId, 'KIOSK', locale), [device.data?.branchId, locale], {
+    enabled: !!device.data,
+    pollMs: 120_000,
+  });
+  // News/ad banner on the idle screen (Admin → Promotions); not part of the original spec.
+  const promotions = useResource<PromotionView[]>(() => api.promotions.active(device.data!.branchId, 'KIOSK', locale), [device.data?.branchId, locale], {
     enabled: !!device.data,
     pollMs: 120_000,
   });
@@ -109,7 +114,15 @@ export function App() {
       )}
 
       <main className="min-h-0 flex-1">
-        {screen.name === 'welcome' && <WelcomeScreen locale={locale} onLocale={setLocale} onStart={() => setScreen({ name: 'catalog' })} branchName={device.data.branchName} />}
+        {screen.name === 'welcome' && (
+          <WelcomeScreen
+            locale={locale}
+            onLocale={setLocale}
+            onStart={() => setScreen({ name: 'catalog' })}
+            branchName={device.data.branchName}
+            promotions={promotions.data ?? []}
+          />
+        )}
         {screen.name === 'catalog' && catalog.data && (
           <CatalogScreen locale={locale} catalog={catalog.data} cart={cart} dispatch={dispatch} onCheckout={() => setScreen({ name: 'checkout' })} onCancel={reset} />
         )}

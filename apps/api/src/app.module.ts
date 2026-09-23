@@ -20,6 +20,7 @@ import { OrdersHttpModule } from './orders/orders-http.module';
 import { OrdersModule } from './orders/orders.module';
 import { PaymentsModule } from './payments/payments.module';
 import { ProductionModule } from './production/production.module';
+import { PromotionsModule } from './promotions/promotions.module';
 import { RealtimeModule } from './realtime/realtime.module';
 import { ReportsModule } from './reports/reports.module';
 import { StationsModule } from './stations/stations.module';
@@ -42,6 +43,7 @@ import { UsersModule } from './users/users.module';
     PaymentsModule,
     OrdersHttpModule,
     ProductionModule,
+    PromotionsModule,
     DispatchModule,
     DisplayModule,
     RealtimeModule,

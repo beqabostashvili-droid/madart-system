@@ -1,5 +1,5 @@
 'use client';
-import type { AdminProductView, CategoryView, ImportPreviewView, ProductionConfigInput } from '@madart/types';
+import type { AdminProductView, AdminPromotionView, CategoryView, ImportPreviewView, ProductionConfigInput } from '@madart/types';
 import { Badge, Button, Field, formatGel, Input, Modal, PageTitle, Select, Spinner, Toggle, useResource, useSession } from '@madart/ui';
 import { useEffect, useState } from 'react';
 import { useAdmin } from '../AdminApp';
@@ -368,5 +368,213 @@ function SummaryTile({ label, value, tone }: { label: string; value: string | nu
       <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">{label}</div>
       <div className={`mt-1 text-2xl font-extrabold ${tone ?? ''}`}>{value}</div>
     </div>
+  );
+}
+
+// ───────────────────────────── promotions (kiosk/mobile banner) ──────────
+
+export function PromotionsPage() {
+  const { api } = useSession();
+  const { branches, can } = useAdmin();
+  const promotions = useResource(() => api.promotions.list(), []);
+  const [editing, setEditing] = useState<AdminPromotionView | 'new' | null>(null);
+  const branchName = (id: string | null) => (id ? branches.find((b) => b.id === id)?.name : 'ყველა ფილიალი') ?? id;
+
+  const isLive = (p: AdminPromotionView) => {
+    const now = Date.now();
+    if (!p.active) return false;
+    if (p.startsAt && new Date(p.startsAt).getTime() > now) return false;
+    if (p.endsAt && new Date(p.endsAt).getTime() <= now) return false;
+    return true;
+  };
+
+  return (
+    <>
+      <PageTitle
+        title="Promotions"
+        subtitle="კიოსკზე და მობილურში მოტივტივე სარეკლამო/საინფორმაციო ბანერი"
+        actions={can('catalog.write') && <Button onClick={() => setEditing('new')}>+ CREATE PROMOTION</Button>}
+      />
+      <Table<AdminPromotionView>
+        rows={promotions.data ?? []}
+        rowKey={(p) => p.id}
+        onRow={(p) => setEditing(p)}
+        columns={[
+          { key: 'img', label: '', render: (p) => <img src={p.imageUrl} alt="" className="h-10 w-16 rounded object-cover" /> },
+          {
+            key: 'title',
+            label: 'სათაური',
+            render: (p) => (
+              <div>
+                <div className="font-semibold">{p.titleKa}</div>
+                {p.subtitleKa && <div className="text-xs text-ink-muted">{p.subtitleKa}</div>}
+              </div>
+            ),
+          },
+          { key: 'branch', label: 'ფილიალი', render: (p) => <span className="text-xs">{branchName(p.branchId)}</span> },
+          { key: 'order', label: '#', render: (p) => p.sortOrder },
+          {
+            key: 'window',
+            label: 'პერიოდი',
+            render: (p) =>
+              p.startsAt || p.endsAt ? (
+                <span className="text-xs text-ink-muted">
+                  {p.startsAt ? new Date(p.startsAt).toLocaleDateString('ka-GE') : '…'} – {p.endsAt ? new Date(p.endsAt).toLocaleDateString('ka-GE') : '…'}
+                </span>
+              ) : (
+                <span className="text-xs text-ink-muted">უვადოდ</span>
+              ),
+          },
+          {
+            key: 'status',
+            label: 'სტატუსი',
+            render: (p) =>
+              isLive(p) ? (
+                <Badge className="bg-green-100 text-green-800">LIVE</Badge>
+              ) : p.active ? (
+                <Badge className="bg-amber-100 text-amber-800">SCHEDULED</Badge>
+              ) : (
+                <Badge className="bg-gray-100 text-gray-600">OFF</Badge>
+              ),
+          },
+        ]}
+        empty="სარეკლამო ბანერები ჯერ არ არის"
+      />
+      {editing && (
+        <PromotionEditor
+          promotion={editing === 'new' ? null : editing}
+          onClose={() => setEditing(null)}
+          onSaved={() => {
+            setEditing(null);
+            void promotions.refresh();
+          }}
+        />
+      )}
+    </>
+  );
+}
+
+function PromotionEditor({ promotion, onClose, onSaved }: { promotion: AdminPromotionView | null; onClose: () => void; onSaved: () => void }) {
+  const { api } = useSession();
+  const { branches, can } = useAdmin();
+  const { submit, busy } = useSubmit();
+  const toDateInput = (iso: string | null) => (iso ? iso.slice(0, 10) : '');
+  const [form, setForm] = useState({
+    branchId: promotion?.branchId ?? '',
+    titleKa: promotion?.titleKa ?? '',
+    titleEn: promotion?.titleEn ?? '',
+    titleRu: promotion?.titleRu ?? '',
+    subtitleKa: promotion?.subtitleKa ?? '',
+    subtitleEn: promotion?.subtitleEn ?? '',
+    subtitleRu: promotion?.subtitleRu ?? '',
+    imageUrl: promotion?.imageUrl ?? '',
+    active: promotion?.active ?? true,
+    sortOrder: String(promotion?.sortOrder ?? 0),
+    startsAt: toDateInput(promotion?.startsAt ?? null),
+    endsAt: toDateInput(promotion?.endsAt ?? null),
+  });
+
+  const save = async () => {
+    const body = {
+      branchId: form.branchId || null,
+      titleKa: form.titleKa,
+      titleEn: form.titleEn || null,
+      titleRu: form.titleRu || null,
+      subtitleKa: form.subtitleKa || null,
+      subtitleEn: form.subtitleEn || null,
+      subtitleRu: form.subtitleRu || null,
+      imageUrl: form.imageUrl,
+      active: form.active,
+      sortOrder: Number(form.sortOrder),
+      startsAt: form.startsAt ? new Date(`${form.startsAt}T00:00:00Z`).toISOString() : null,
+      endsAt: form.endsAt ? new Date(`${form.endsAt}T23:59:59Z`).toISOString() : null,
+    };
+    const r = await submit(() => (promotion ? api.promotions.update(promotion.id, body) : api.promotions.create(body)), 'შენახულია');
+    if (r) onSaved();
+  };
+
+  return (
+    <Modal
+      open
+      onClose={onClose}
+      title={promotion ? 'ბანერის რედაქტირება' : 'ახალი ბანერი'}
+      size="lg"
+      footer={
+        <>
+          {promotion && can('catalog.write') && (
+            <Button
+              variant="danger"
+              className="mr-auto"
+              loading={busy}
+              onClick={async () => {
+                await submit(() => api.promotions.remove(promotion.id), 'წაშლილია');
+                onSaved();
+              }}
+            >
+              წაშლა
+            </Button>
+          )}
+          <Button variant="outline" onClick={onClose}>
+            გაუქმება
+          </Button>
+          {can('catalog.write') && (
+            <Button loading={busy} disabled={!form.titleKa || !form.imageUrl} onClick={save}>
+              შენახვა
+            </Button>
+          )}
+        </>
+      }
+    >
+      <div className="grid gap-4 md:grid-cols-2">
+        <Field label="სურათის URL (თანაფარდობა ~16:9)">
+          <Input value={form.imageUrl} onChange={(e) => setForm({ ...form, imageUrl: e.target.value })} placeholder="https://…" />
+        </Field>
+        <Field label="ფილიალი">
+          <Select value={form.branchId} onChange={(e) => setForm({ ...form, branchId: e.target.value })}>
+            <option value="">ყველა ფილიალი</option>
+            {branches.map((b) => (
+              <option key={b.id} value={b.id}>
+                {b.name}
+              </option>
+            ))}
+          </Select>
+        </Field>
+        {form.imageUrl && (
+          <div className="md:col-span-2">
+            <img src={form.imageUrl} alt="" className="h-32 w-full rounded-xl object-cover" />
+          </div>
+        )}
+        <Field label="სათაური (KA)">
+          <Input value={form.titleKa} onChange={(e) => setForm({ ...form, titleKa: e.target.value })} />
+        </Field>
+        <Field label="ქვესათაური (KA)">
+          <Input value={form.subtitleKa} onChange={(e) => setForm({ ...form, subtitleKa: e.target.value })} />
+        </Field>
+        <Field label="Title (EN)">
+          <Input value={form.titleEn} onChange={(e) => setForm({ ...form, titleEn: e.target.value })} />
+        </Field>
+        <Field label="Subtitle (EN)">
+          <Input value={form.subtitleEn} onChange={(e) => setForm({ ...form, subtitleEn: e.target.value })} />
+        </Field>
+        <Field label="Название (RU)">
+          <Input value={form.titleRu} onChange={(e) => setForm({ ...form, titleRu: e.target.value })} />
+        </Field>
+        <Field label="Подзаголовок (RU)">
+          <Input value={form.subtitleRu} onChange={(e) => setForm({ ...form, subtitleRu: e.target.value })} />
+        </Field>
+        <Field label="დაწყება (არასავალდებულო)">
+          <Input type="date" value={form.startsAt} onChange={(e) => setForm({ ...form, startsAt: e.target.value })} />
+        </Field>
+        <Field label="დასრულება (არასავალდებულო)">
+          <Input type="date" value={form.endsAt} onChange={(e) => setForm({ ...form, endsAt: e.target.value })} />
+        </Field>
+        <Field label="თანმიმდევრობა">
+          <Input type="number" value={form.sortOrder} onChange={(e) => setForm({ ...form, sortOrder: e.target.value })} />
+        </Field>
+        <div className="pt-6">
+          <Toggle checked={form.active} onChange={(v) => setForm({ ...form, active: v })} label="აქტიური" />
+        </div>
+      </div>
+    </Modal>
   );
 }

@@ -217,6 +217,7 @@ model Branch {
   sequences      OrderNumberSequence[]
   settings       SystemSetting[]
   auditLogs      AuditLog[]
+  promotions     Promotion[]
 }
 
 model ProductionStation {
@@ -260,6 +261,33 @@ model PickupSlot {
   maxOrders Int?
 
   @@unique([branchId, startsAt])
+}
+
+// ───────────────────────────── marketing ─────────────────────────────────
+
+/// Kiosk / mobile promo & news banner (spec-adjacent: not in the original spec,
+/// added for in-store advertising and announcements). branchId null = shown at
+/// every branch. Rotation and date-window logic lives in the API/kiosk, not here.
+model Promotion {
+  id        String    @id @default(uuid()) @db.Uuid
+  branchId  String?   @db.Uuid
+  branch    Branch?   @relation(fields: [branchId], references: [id])
+  titleKa   String
+  titleEn   String?
+  titleRu   String?
+  subtitleKa String?
+  subtitleEn String?
+  subtitleRu String?
+  imageUrl  String
+  linkProductId String? @db.Uuid
+  active    Boolean   @default(true)
+  sortOrder Int       @default(0)
+  startsAt  DateTime?
+  endsAt    DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([branchId, active, sortOrder])
 }
 
 // ───────────────────────────── catalog ───────────────────────────────────

@@ -49,6 +49,15 @@ means any authenticated actor of the branch.
 | POST | /admin/catalog-imports/preview `{source: MADART_GE\|JSON_SNAPSHOT}` | catalog.import | returns counts + per-item action (NEW/UPDATE/UNCHANGED) |
 | POST | /admin/catalog-imports/:id/commit | catalog.import | applies the preview |
 
+## Promotions (kiosk/mobile news & ad banner — not in the original spec, see ASSUMPTIONS A-23)
+| Method | Path | Perm | Notes |
+|---|---|---|---|
+| GET | /promotions?branchId&channel=KIOSK\|MOBILE&locale | public/device | currently-live promotions for the branch, in display order |
+| GET | /admin/promotions?branchId | catalog.read | all promotions (any status), for the given branch or all |
+| POST | /admin/promotions | catalog.write | |
+| PATCH | /admin/promotions/:id | catalog.write | |
+| DELETE | /admin/promotions/:id | catalog.write | |
+
 ## Orders
 | Method | Path | Perm | Notes |
 |---|---|---|---|
