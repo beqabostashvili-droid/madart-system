@@ -9,8 +9,10 @@
     "noUncheckedIndexedAccess": false,
     "declaration": false,
     "declarationMap": false,
-    "removeComments": true,
-    "incremental": true
+    "removeComments": true
   },
-  "include": ["src", "test"]
+  "include": [
+    "src",
+    "test"
+  ]
 }
