@@ -48,6 +48,24 @@ pnpm --filter @madart/database seed             # first install only (creates ad
 ```
 Change seeded passwords immediately in Admin → Employees.
 
+### Migrations behind a connection pooler (Neon)
+`migrate deploy` takes a session advisory lock (`pg_advisory_lock(72707369)`).
+Through Neon's **pooled** endpoint (`…-pooler…`, PgBouncer) that lock can be
+left behind when a migration process is killed mid-run: the client disconnects
+but the pooled server connection stays open, so the lock is never released and
+every later deploy fails with `Error: P1002 … Timed out trying to acquire a
+postgres advisory lock`. The app itself is unaffected — only migrations block.
+
+Check with:
+```sql
+select l.pid, a.state from pg_locks l join pg_stat_activity a using (pid)
+where l.locktype = 'advisory' and l.objid = 72707369;
+```
+It clears on its own once the pooler recycles that backend (~10 min idle), and
+redeploying then succeeds. The durable fix is to point migrations at the
+**direct** (non-pooled) Neon endpoint — same host without `-pooler` — via a
+separate `DIRECT_URL`, and use `DATABASE_URL` (pooled) only for the running app.
+
 ## Reverse proxy
 Terminate TLS in front of the API and web apps. Socket.IO needs WebSocket
 upgrade headers (`Upgrade`, `Connection`) forwarded on `/rt`.
