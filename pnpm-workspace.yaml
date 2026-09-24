@@ -17,3 +17,5 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
   '@swc/core': true
+  # Squirrel packaging only; the kiosk ships as NSIS + portable, so skip it.
+  electron-winstaller: false

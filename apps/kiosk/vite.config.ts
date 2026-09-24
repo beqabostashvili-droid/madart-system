@@ -12,6 +12,10 @@ const VIA = ['@madart/ui', '@madart/api-client'];
 const VIA_DEPS = ['@madart/domain', '@madart/types'];
 
 export default defineConfig({
+  // Relative asset paths: the packaged Electron app loads index.html over
+  // file://, where Vite's default absolute "/assets/…" resolves to the drive
+  // root and the window stays blank. Also valid for the Vercel deployment.
+  base: './',
   plugins: [react(), tailwindcss()],
   server: { port: 5173, strictPort: true },
   optimizeDeps: {

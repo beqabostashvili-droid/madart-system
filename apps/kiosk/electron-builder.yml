@@ -1,0 +1,44 @@
+appId: ge.madart.kiosk
+productName: MADART Kiosk
+copyright: MADART
+
+# Built outside the repo: a watcher on the Desktop tree (Defender/indexer) holds
+# a handle on the freshly extracted Electron directory, and electron-builder's
+# rename of it then fails with EPERM. Same reason the dev DB binaries live under
+# LOCALAPPDATA. Keeps the 90 MB artefacts out of the working tree as a bonus.
+directories:
+  output: ${env.LOCALAPPDATA}/MADART/kiosk-release
+  buildResources: build
+
+# The renderer is a self-contained Vite bundle and electron/main.cjs only needs
+# Electron itself, so no node_modules ship with the app. dependencies is cleared
+# in the packaged manifest because electron-builder cannot resolve pnpm's
+# workspace:* protocol.
+files:
+  - dist/**/*
+  - electron/**/*
+  - package.json
+extraMetadata:
+  main: electron/main.cjs
+  dependencies: {}
+npmRebuild: false
+
+win:
+  icon: build/icon.png
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: MADART Kiosk
+  artifactName: MADART-Kiosk-Setup-${version}.${ext}
+
+portable:
+  artifactName: MADART-Kiosk-${version}-portable.${ext}

@@ -66,6 +66,26 @@ redeploying then succeeds. The durable fix is to point migrations at the
 **direct** (non-pooled) Neon endpoint — same host without `-pooler` — via a
 separate `DIRECT_URL`, and use `DATABASE_URL` (pooled) only for the running app.
 
+## Kiosk desktop app (Windows)
+```bash
+pnpm --filter kiosk desktop     # vite build + electron-builder
+```
+Produces an NSIS installer and a portable exe in
+`%LOCALAPPDATA%\MADART\kiosk-release`. The installer is per-user (no admin),
+creates desktop and Start-menu shortcuts and ships an uninstaller. The window
+runs full-screen kiosk mode; staff exit with **Ctrl+Shift+Q**, and
+`KIOSK_MODE=false` starts it windowed for testing.
+
+The API URL is baked in at build time by the `desktop:build` script
+(`VITE_API_URL`, currently the Render deployment) — change it there to point a
+build at a different backend. Each installed kiosk is paired once by pasting its
+device token from Admin → Devices; the token is then kept locally.
+
+Artefacts are built outside the repository because a file-system watcher on the
+Desktop tree makes electron-builder's rename step fail with `EPERM`. Builds are
+unsigned, so Windows SmartScreen warns on first run ("More info → Run anyway");
+a code-signing certificate removes that.
+
 ## Reverse proxy
 Terminate TLS in front of the API and web apps. Socket.IO needs WebSocket
 upgrade headers (`Upgrade`, `Connection`) forwarded on `/rt`.
