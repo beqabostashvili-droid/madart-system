@@ -7,12 +7,15 @@ export function WelcomeScreen({
   locale,
   onLocale,
   onStart,
+  onPromotion,
   branchName,
   promotions,
 }: {
   locale: Locale;
   onLocale: (l: Locale) => void;
   onStart: () => void;
+  /** A promotion linked to a product was tapped: open the catalog on that product. */
+  onPromotion: (promotion: PromotionView) => void;
   branchName: string;
   promotions: PromotionView[];
 }) {
@@ -25,7 +28,14 @@ export function WelcomeScreen({
           <div className="text-7xl font-extrabold tracking-tight">MADART</div>
           <div className="mt-2 text-xl opacity-80">{branchName}</div>
         </div>
-        {promotions.length > 0 && <PromoCarousel promotions={promotions} className="h-[28vh] max-h-72 min-h-36 w-full max-w-[680px] rounded-3xl shadow-2xl" />}
+        {promotions.length > 0 && (
+          <PromoCarousel
+            promotions={promotions}
+            onSelect={onPromotion}
+            labels={{ NEW_PRODUCT: t(locale, 'promoNew'), DISCOUNT: t(locale, 'promoDiscount'), tap: t(locale, 'promoTap') }}
+            className="h-[42vh] max-h-[620px] min-h-44 w-full max-w-[900px] rounded-[2rem] shadow-2xl"
+          />
+        )}
         <div className="animate-pulse text-3xl font-semibold">{t(locale, 'welcome')}</div>
       </div>
       <div className="flex shrink-0 flex-col items-center gap-4 pb-10 pt-2" onClick={(e) => e.stopPropagation()}>

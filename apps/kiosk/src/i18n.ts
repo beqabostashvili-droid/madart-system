@@ -37,6 +37,9 @@ const dict = {
     quantity: 'რაოდენობა',
     close: 'დახურვა',
     printReceipt: 'ჩეკის ბეჭდვა',
+    promoNew: 'ახალი',
+    promoDiscount: 'ფასდაკლება',
+    promoTap: 'ნახეთ პროდუქტი',
   },
   en: {
     welcome: 'Touch the screen to start your order',
@@ -74,6 +77,9 @@ const dict = {
     quantity: 'Quantity',
     close: 'Close',
     printReceipt: 'Print receipt',
+    promoNew: 'New',
+    promoDiscount: 'Sale',
+    promoTap: 'View product',
   },
   ru: {
     welcome: 'Коснитесь экрана, чтобы начать заказ',
@@ -111,6 +117,9 @@ const dict = {
     quantity: 'Количество',
     close: 'Закрыть',
     printReceipt: 'Печать чека',
+    promoNew: 'Новинка',
+    promoDiscount: 'Скидка',
+    promoTap: 'Смотреть',
   },
 } as const;
 

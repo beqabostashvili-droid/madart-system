@@ -11,7 +11,12 @@ import { PairingScreen } from './screens/PairingScreen';
 import { ResultScreen } from './screens/ResultScreen';
 import { WelcomeScreen } from './screens/WelcomeScreen';
 
-type Screen = { name: 'welcome' } | { name: 'catalog' } | { name: 'checkout' } | { name: 'result'; result: CreateOrderResponse; payment: PaymentView | null };
+type Screen =
+  | { name: 'welcome' }
+  // openProductId: a promotion tapped on the idle screen opens that product straight away
+  | { name: 'catalog'; openProductId?: string }
+  | { name: 'checkout' }
+  | { name: 'result'; result: CreateOrderResponse; payment: PaymentView | null };
 
 const IDLE_MS = 90_000;
 const RESULT_MS = 25_000;
@@ -119,6 +124,7 @@ export function App() {
             locale={locale}
             onLocale={setLocale}
             onStart={() => setScreen({ name: 'catalog' })}
+            onPromotion={(p) => setScreen({ name: 'catalog', openProductId: p.linkProductId ?? undefined })}
             branchName={device.data.branchName}
             promotions={promotions.data ?? []}
           />
@@ -132,6 +138,7 @@ export function App() {
             onCheckout={() => setScreen({ name: 'checkout' })}
             onCancel={reset}
             promotions={promotions.data ?? []}
+            openProductId={screen.openProductId}
           />
         )}
         {screen.name === 'checkout' && catalog.data && (

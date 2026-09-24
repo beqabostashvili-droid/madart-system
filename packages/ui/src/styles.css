@@ -108,6 +108,51 @@
   animation: madart-pulse-ring 1.4s ease-out infinite;
 }
 
+/* ───────────────────────── promo banners (kiosk / mobile) ───────────────── */
+/* --promo-interval is set inline by PromoCarousel / PromoSpotlight so the slow
+   zoom and the progress bar finish exactly when the slide changes. */
+@keyframes madart-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+.animate-kenburns {
+  animation: madart-kenburns var(--promo-interval, 7s) ease-out forwards;
+}
+.animate-kenburns-loop {
+  animation: madart-kenburns 14s ease-in-out infinite alternate;
+}
+@keyframes madart-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.animate-progress {
+  animation: madart-progress var(--promo-interval, 7s) linear forwards;
+}
+@keyframes madart-rise {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-rise {
+  animation: madart-rise 550ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.animate-rise-delay {
+  animation: madart-rise 550ms cubic-bezier(0.2, 0.8, 0.2, 1) 120ms both;
+}
+
 /* ───────────────────────── receipt paper (80 mm thermal slip) ───────────── */
 .receipt-paper {
   width: 302px; /* 80 mm @ 96 dpi */

@@ -377,8 +377,10 @@ export function PromotionsPage() {
   const { api } = useSession();
   const { branches, can } = useAdmin();
   const promotions = useResource(() => api.promotions.list(), []);
+  const products = useResource(() => api.catalog.products({ includeArchived: true }), []);
   const [editing, setEditing] = useState<AdminPromotionView | 'new' | null>(null);
   const branchName = (id: string | null) => (id ? branches.find((b) => b.id === id)?.name : 'ყველა ფილიალი') ?? id;
+  const productName = (id: string | null) => (id ? (products.data?.find((p) => p.id === id) ? adminProductName(products.data.find((p) => p.id === id)!) : '…') : null);
 
   const isLive = (p: AdminPromotionView) => {
     const now = Date.now();
@@ -408,6 +410,7 @@ export function PromotionsPage() {
               <div>
                 <div className="font-semibold">{p.titleKa}</div>
                 {p.subtitleKa && <div className="text-xs text-ink-muted">{p.subtitleKa}</div>}
+                {p.linkProductId && <div className="mt-0.5 text-xs text-info">→ {productName(p.linkProductId)}</div>}
               </div>
             ),
           },
@@ -466,13 +469,18 @@ export function PromotionsPage() {
   );
 }
 
+const adminProductName = (p: AdminProductView) => p.translations.find((t) => t.locale === 'ka')?.name ?? p.translations[0]?.name ?? p.sku;
+
 function PromotionEditor({ promotion, onClose, onSaved }: { promotion: AdminPromotionView | null; onClose: () => void; onSaved: () => void }) {
   const { api } = useSession();
   const { branches, can } = useAdmin();
   const { submit, busy } = useSubmit();
+  const products = useResource(() => api.catalog.products({}), []);
+  const categories = useResource(() => api.catalog.categories(), []);
   const toDateInput = (iso: string | null) => (iso ? iso.slice(0, 10) : '');
   const [form, setForm] = useState({
     branchId: promotion?.branchId ?? '',
+    linkProductId: promotion?.linkProductId ?? '',
     kind: promotion?.kind ?? 'GENERAL',
     badgeText: promotion?.badgeText ?? '',
     titleKa: promotion?.titleKa ?? '',
@@ -491,6 +499,7 @@ function PromotionEditor({ promotion, onClose, onSaved }: { promotion: AdminProm
   const save = async () => {
     const body = {
       branchId: form.branchId || null,
+      linkProductId: form.linkProductId || null,
       kind: form.kind,
       badgeText: form.badgeText || null,
       titleKa: form.titleKa,
@@ -542,6 +551,36 @@ function PromotionEditor({ promotion, onClose, onSaved }: { promotion: AdminProm
       }
     >
       <div className="grid gap-4 md:grid-cols-2">
+        <Field label="მიბმული პროდუქტი — კიოსკზე ბანერზე დაჭერით გაიხსნება">
+          <Select
+            value={form.linkProductId}
+            onChange={(e) => {
+              const product = products.data?.find((p) => p.id === e.target.value);
+              // picking a product fills the still-empty fields so a "new product" banner is two clicks
+              setForm({
+                ...form,
+                linkProductId: e.target.value,
+                imageUrl: form.imageUrl || product?.imageUrl || '',
+                titleKa: form.titleKa || (product ? adminProductName(product) : ''),
+              });
+            }}
+          >
+            <option value="">— არცერთი (მხოლოდ ინფორმაცია) —</option>
+            {(categories.data ?? []).map((c) => {
+              const inCategory = (products.data ?? []).filter((p) => p.categoryId === c.id && !p.archivedAt);
+              if (inCategory.length === 0) return null;
+              return (
+                <optgroup key={c.id} label={c.nameKa}>
+                  {inCategory.map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {adminProductName(p)}
+                    </option>
+                  ))}
+                </optgroup>
+              );
+            })}
+          </Select>
+        </Field>
         <Field label="სურათის URL (თანაფარდობა ~16:9)">
           <Input value={form.imageUrl} onChange={(e) => setForm({ ...form, imageUrl: e.target.value })} placeholder="https://…" />
         </Field>

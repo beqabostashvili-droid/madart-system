@@ -1,7 +1,7 @@
 import type { Locale } from '@madart/domain';
 import type { CatalogProductView, CatalogView, PromotionView } from '@madart/types';
 import { Button, cx, formatGel, Modal, PromoSpotlight, QuantityStepper } from '@madart/ui';
-import { type Dispatch, useMemo, useState } from 'react';
+import { type Dispatch, useEffect, useMemo, useState } from 'react';
 import { type CartAction, type CartLine, cartCount, cartTotal } from '../cart';
 import { t } from '../i18n';
 
@@ -13,6 +13,7 @@ export function CatalogScreen({
   onCheckout,
   onCancel,
   promotions,
+  openProductId,
 }: {
   locale: Locale;
   catalog: CatalogView;
@@ -21,6 +22,8 @@ export function CatalogScreen({
   onCheckout: () => void;
   onCancel: () => void;
   promotions: PromotionView[];
+  /** Product to open immediately (a promotion tapped on the idle screen). */
+  openProductId?: string;
 }) {
   const [categoryId, setCategoryId] = useState<string>(catalog.categories[0]?.id ?? '');
   const [detail, setDetail] = useState<CatalogProductView | null>(null);
@@ -28,13 +31,25 @@ export function CatalogScreen({
   const products = useMemo(() => catalog.products.filter((p) => p.categoryId === categoryId), [catalog, categoryId]);
   const byId = useMemo(() => new Map(catalog.products.map((p) => [p.id, p])), [catalog]);
 
+  // Opening a product also selects its category, so closing the detail leaves
+  // the customer among related items instead of back on the first category.
+  const showProduct = (productId: string) => {
+    const product = byId.get(productId);
+    if (!product) return;
+    setCategoryId(product.categoryId);
+    setDetail(product);
+  };
+  useEffect(() => {
+    if (openProductId) showProduct(openProductId);
+  }, [openProductId]);
+
   // catalog spotlight ads (Admin → Promotions, kind NEW_PRODUCT/DISCOUNT): kept
   // as two separate cards so a discount never gets buried under news, per spec.
   const newPromotions = useMemo(() => promotions.filter((p) => p.kind === 'NEW_PRODUCT'), [promotions]);
   const discountPromotions = useMemo(() => promotions.filter((p) => p.kind === 'DISCOUNT'), [promotions]);
+  const promoLabels = { NEW_PRODUCT: t(locale, 'promoNew'), DISCOUNT: t(locale, 'promoDiscount'), tap: t(locale, 'promoTap') };
   const openPromotion = (p: PromotionView) => {
-    const linked = p.linkProductId && byId.get(p.linkProductId);
-    if (linked) setDetail(linked);
+    if (p.linkProductId) showProduct(p.linkProductId);
   };
 
   // upsell (spec §4): recommendations of cart items not yet in the cart
@@ -62,9 +77,9 @@ export function CatalogScreen({
 
       <section className="min-w-0 flex-1 overflow-y-auto p-4">
         {(newPromotions.length > 0 || discountPromotions.length > 0) && (
-          <div className="mb-4 grid gap-3 sm:grid-cols-2">
-            {newPromotions.length > 0 && <PromoSpotlight promotions={newPromotions} kind="NEW_PRODUCT" onSelect={openPromotion} className="h-36" />}
-            {discountPromotions.length > 0 && <PromoSpotlight promotions={discountPromotions} kind="DISCOUNT" onSelect={openPromotion} className="h-36" />}
+          <div className="mb-5 grid gap-4 sm:grid-cols-2">
+            {newPromotions.length > 0 && <PromoSpotlight promotions={newPromotions} kind="NEW_PRODUCT" onSelect={openPromotion} labels={promoLabels} className="h-52" />}
+            {discountPromotions.length > 0 && <PromoSpotlight promotions={discountPromotions} kind="DISCOUNT" onSelect={openPromotion} labels={promoLabels} className="h-52" />}
           </div>
         )}
         {products.length === 0 && <div className="p-8 text-center text-ink-muted">{t(locale, 'noProducts')}</div>}
