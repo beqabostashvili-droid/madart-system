@@ -124,7 +124,15 @@ export function App() {
           />
         )}
         {screen.name === 'catalog' && catalog.data && (
-          <CatalogScreen locale={locale} catalog={catalog.data} cart={cart} dispatch={dispatch} onCheckout={() => setScreen({ name: 'checkout' })} onCancel={reset} />
+          <CatalogScreen
+            locale={locale}
+            catalog={catalog.data}
+            cart={cart}
+            dispatch={dispatch}
+            onCheckout={() => setScreen({ name: 'checkout' })}
+            onCancel={reset}
+            promotions={promotions.data ?? []}
+          />
         )}
         {screen.name === 'checkout' && catalog.data && (
           <CheckoutScreen locale={locale} cart={cart} total={cartTotal(cart)} paying={paying} onBack={() => setScreen({ name: 'catalog' })} onPay={placeOrder} />

@@ -265,6 +265,15 @@ model PickupSlot {
 
 // ───────────────────────────── marketing ─────────────────────────────────
 
+/// Which shelf a promotion shows on: GENERAL only rotates on the kiosk idle
+/// screen; NEW_PRODUCT and DISCOUNT also get their own spotlight card on the
+/// catalog screen (kept apart so a discount never gets buried under news).
+enum PromotionKind {
+  GENERAL
+  NEW_PRODUCT
+  DISCOUNT
+}
+
 /// Kiosk / mobile promo & news banner (spec-adjacent: not in the original spec,
 /// added for in-store advertising and announcements). branchId null = shown at
 /// every branch. Rotation and date-window logic lives in the API/kiosk, not here.
@@ -272,6 +281,8 @@ model Promotion {
   id        String    @id @default(uuid()) @db.Uuid
   branchId  String?   @db.Uuid
   branch    Branch?   @relation(fields: [branchId], references: [id])
+  kind      PromotionKind @default(GENERAL)
+  badgeText String?
   titleKa   String
   titleEn   String?
   titleRu   String?
@@ -288,6 +299,7 @@ model Promotion {
   updatedAt DateTime  @updatedAt
 
   @@index([branchId, active, sortOrder])
+  @@index([branchId, kind, active])
 }
 
 // ───────────────────────────── catalog ───────────────────────────────────

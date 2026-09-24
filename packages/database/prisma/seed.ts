@@ -225,6 +225,8 @@ async function main() {
       data: [
         {
           branchId: null,
+          kind: 'NEW_PRODUCT',
+          badgeText: 'ახალი',
           titleKa: 'ახალი გემო: ხაჭაპური აჭარული',
           titleEn: 'New: Acharuli Khachapuri',
           subtitleKa: 'სცადეთ ჩვენი უახლესი შემატება',
@@ -234,6 +236,8 @@ async function main() {
         },
         {
           branchId: null,
+          kind: 'DISCOUNT',
+          badgeText: '-10%',
           titleKa: '−10% ტორტებზე შაბათ-კვირას',
           titleEn: '−10% off cakes on weekends',
           subtitleKa: 'შეკვეთა კიოსკზე ან მობილურით',

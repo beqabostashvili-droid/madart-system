@@ -52,7 +52,7 @@ means any authenticated actor of the branch.
 ## Promotions (kiosk/mobile news & ad banner — not in the original spec, see ASSUMPTIONS A-23)
 | Method | Path | Perm | Notes |
 |---|---|---|---|
-| GET | /promotions?branchId&channel=KIOSK\|MOBILE&locale | public/device | currently-live promotions for the branch, in display order |
+| GET | /promotions?branchId&channel=KIOSK\|MOBILE&locale | public/device | currently-live promotions for the branch, in display order; each has `kind: GENERAL\|NEW_PRODUCT\|DISCOUNT` and optional `badgeText` |
 | GET | /admin/promotions?branchId | catalog.read | all promotions (any status), for the given branch or all |
 | POST | /admin/promotions | catalog.write | |
 | PATCH | /admin/promotions/:id | catalog.write | |

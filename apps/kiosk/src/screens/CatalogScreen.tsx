@@ -1,6 +1,6 @@
 import type { Locale } from '@madart/domain';
-import type { CatalogProductView, CatalogView } from '@madart/types';
-import { Button, cx, formatGel, Modal, QuantityStepper } from '@madart/ui';
+import type { CatalogProductView, CatalogView, PromotionView } from '@madart/types';
+import { Button, cx, formatGel, Modal, PromoSpotlight, QuantityStepper } from '@madart/ui';
 import { type Dispatch, useMemo, useState } from 'react';
 import { type CartAction, type CartLine, cartCount, cartTotal } from '../cart';
 import { t } from '../i18n';
@@ -12,6 +12,7 @@ export function CatalogScreen({
   dispatch,
   onCheckout,
   onCancel,
+  promotions,
 }: {
   locale: Locale;
   catalog: CatalogView;
@@ -19,12 +20,22 @@ export function CatalogScreen({
   dispatch: Dispatch<CartAction>;
   onCheckout: () => void;
   onCancel: () => void;
+  promotions: PromotionView[];
 }) {
   const [categoryId, setCategoryId] = useState<string>(catalog.categories[0]?.id ?? '');
   const [detail, setDetail] = useState<CatalogProductView | null>(null);
   const [cartOpen, setCartOpen] = useState(false);
   const products = useMemo(() => catalog.products.filter((p) => p.categoryId === categoryId), [catalog, categoryId]);
   const byId = useMemo(() => new Map(catalog.products.map((p) => [p.id, p])), [catalog]);
+
+  // catalog spotlight ads (Admin → Promotions, kind NEW_PRODUCT/DISCOUNT): kept
+  // as two separate cards so a discount never gets buried under news, per spec.
+  const newPromotions = useMemo(() => promotions.filter((p) => p.kind === 'NEW_PRODUCT'), [promotions]);
+  const discountPromotions = useMemo(() => promotions.filter((p) => p.kind === 'DISCOUNT'), [promotions]);
+  const openPromotion = (p: PromotionView) => {
+    const linked = p.linkProductId && byId.get(p.linkProductId);
+    if (linked) setDetail(linked);
+  };
 
   // upsell (spec §4): recommendations of cart items not yet in the cart
   const recommendations = useMemo(() => {
@@ -50,6 +61,12 @@ export function CatalogScreen({
       </aside>
 
       <section className="min-w-0 flex-1 overflow-y-auto p-4">
+        {(newPromotions.length > 0 || discountPromotions.length > 0) && (
+          <div className="mb-4 grid gap-3 sm:grid-cols-2">
+            {newPromotions.length > 0 && <PromoSpotlight promotions={newPromotions} kind="NEW_PRODUCT" onSelect={openPromotion} className="h-36" />}
+            {discountPromotions.length > 0 && <PromoSpotlight promotions={discountPromotions} kind="DISCOUNT" onSelect={openPromotion} className="h-36" />}
+          </div>
+        )}
         {products.length === 0 && <div className="p-8 text-center text-ink-muted">{t(locale, 'noProducts')}</div>}
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
           {products.map((p) => (

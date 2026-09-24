@@ -412,6 +412,18 @@ export function PromotionsPage() {
             ),
           },
           { key: 'branch', label: 'ფილიალი', render: (p) => <span className="text-xs">{branchName(p.branchId)}</span> },
+          {
+            key: 'kind',
+            label: 'ადგილი',
+            render: (p) =>
+              p.kind === 'NEW_PRODUCT' ? (
+                <Badge className="bg-emerald-100 text-emerald-800">ახალი პროდუქტი</Badge>
+              ) : p.kind === 'DISCOUNT' ? (
+                <Badge className="bg-rose-100 text-rose-800">ფასდაკლება</Badge>
+              ) : (
+                <Badge className="bg-gray-100 text-gray-600">ზოგადი</Badge>
+              ),
+          },
           { key: 'order', label: '#', render: (p) => p.sortOrder },
           {
             key: 'window',
@@ -461,6 +473,8 @@ function PromotionEditor({ promotion, onClose, onSaved }: { promotion: AdminProm
   const toDateInput = (iso: string | null) => (iso ? iso.slice(0, 10) : '');
   const [form, setForm] = useState({
     branchId: promotion?.branchId ?? '',
+    kind: promotion?.kind ?? 'GENERAL',
+    badgeText: promotion?.badgeText ?? '',
     titleKa: promotion?.titleKa ?? '',
     titleEn: promotion?.titleEn ?? '',
     titleRu: promotion?.titleRu ?? '',
@@ -477,6 +491,8 @@ function PromotionEditor({ promotion, onClose, onSaved }: { promotion: AdminProm
   const save = async () => {
     const body = {
       branchId: form.branchId || null,
+      kind: form.kind,
+      badgeText: form.badgeText || null,
       titleKa: form.titleKa,
       titleEn: form.titleEn || null,
       titleRu: form.titleRu || null,
@@ -538,6 +554,16 @@ function PromotionEditor({ promotion, onClose, onSaved }: { promotion: AdminProm
               </option>
             ))}
           </Select>
+        </Field>
+        <Field label="სად გამოჩნდეს">
+          <Select value={form.kind} onChange={(e) => setForm({ ...form, kind: e.target.value as typeof form.kind })}>
+            <option value="GENERAL">ზოგადი (მხოლოდ მისალმების ეკრანზე)</option>
+            <option value="NEW_PRODUCT">ახალი პროდუქტი (+ ცალკე ბლოკი კატალოგში)</option>
+            <option value="DISCOUNT">ფასდაკლება (+ ცალკე ბლოკი კატალოგში)</option>
+          </Select>
+        </Field>
+        <Field label="ბეიჯის ტექსტი (არასავალდებულო, მაგ. -15% ან ახალი)">
+          <Input value={form.badgeText} onChange={(e) => setForm({ ...form, badgeText: e.target.value })} placeholder={form.kind === 'DISCOUNT' ? '-15%' : 'ახალი'} />
         </Field>
         {form.imageUrl && (
           <div className="md:col-span-2">

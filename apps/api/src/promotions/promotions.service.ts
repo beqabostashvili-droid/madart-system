@@ -11,6 +11,8 @@ function toAdminView(p: Promotion): AdminPromotionView {
   return {
     id: p.id,
     branchId: p.branchId,
+    kind: p.kind,
+    badgeText: p.badgeText,
     titleKa: p.titleKa,
     titleEn: p.titleEn,
     titleRu: p.titleRu,
@@ -32,6 +34,8 @@ function toPublicView(p: Promotion, locale: 'ka' | 'en' | 'ru'): PromotionView {
   return {
     id: p.id,
     branchId: p.branchId,
+    kind: p.kind,
+    badgeText: p.badgeText,
     title: localizedField({ nameKa: p.titleKa, nameEn: p.titleEn, nameRu: p.titleRu }, locale),
     subtitle: p.subtitleKa ? localizedField({ nameKa: p.subtitleKa, nameEn: p.subtitleEn, nameRu: p.subtitleRu }, locale) : null,
     imageUrl: p.imageUrl,
@@ -85,6 +89,8 @@ export class PromotionsService {
     const p = await this.prisma.client.promotion.create({
       data: {
         branchId: body.branchId ?? null,
+        kind: body.kind,
+        badgeText: body.badgeText ?? null,
         titleKa: body.titleKa,
         titleEn: body.titleEn ?? null,
         titleRu: body.titleRu ?? null,
@@ -108,6 +114,8 @@ export class PromotionsService {
       where: { id },
       data: {
         ...(body.branchId !== undefined ? { branchId: body.branchId } : {}),
+        ...(body.kind !== undefined ? { kind: body.kind } : {}),
+        ...(body.badgeText !== undefined ? { badgeText: body.badgeText } : {}),
         ...(body.titleKa !== undefined ? { titleKa: body.titleKa } : {}),
         ...(body.titleEn !== undefined ? { titleEn: body.titleEn } : {}),
         ...(body.titleRu !== undefined ? { titleRu: body.titleRu } : {}),

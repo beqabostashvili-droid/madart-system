@@ -1,11 +1,19 @@
 import { z } from 'zod';
 import { isoDate, uuid } from './common';
 
+/** Which shelf a promotion shows on: GENERAL only rotates on the kiosk idle
+ * screen; NEW_PRODUCT/DISCOUNT also get their own spotlight card on the
+ * catalog screen. */
+export const promotionKinds = ['GENERAL', 'NEW_PRODUCT', 'DISCOUNT'] as const;
+export type PromotionKind = (typeof promotionKinds)[number];
+
 /** Kiosk / mobile promo & news banner. Added for in-store advertising and
  * announcements (not in the original spec); shown as a rotating strip. */
 export interface PromotionView {
   id: string;
   branchId: string | null;
+  kind: PromotionKind;
+  badgeText: string | null;
   title: string; // localized
   subtitle: string | null; // localized
   imageUrl: string;
@@ -19,6 +27,8 @@ export interface PromotionView {
 export interface AdminPromotionView {
   id: string;
   branchId: string | null;
+  kind: PromotionKind;
+  badgeText: string | null;
   titleKa: string;
   titleEn: string | null;
   titleRu: string | null;
@@ -37,6 +47,8 @@ export interface AdminPromotionView {
 
 export const createPromotionBody = z.object({
   branchId: uuid.nullable().optional(),
+  kind: z.enum(promotionKinds).default('GENERAL'),
+  badgeText: z.string().max(24).nullable().optional(),
   titleKa: z.string().min(1).max(120),
   titleEn: z.string().max(120).nullable().optional(),
   titleRu: z.string().max(120).nullable().optional(),
