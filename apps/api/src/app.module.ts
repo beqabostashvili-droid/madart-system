@@ -13,6 +13,7 @@ import { EventsModule } from './common/events/events.module';
 import { RequestLoggerInterceptor } from './common/logging/request-logger.interceptor';
 import { PrismaModule } from './common/prisma/prisma.module';
 import { DevicesModule } from './devices/devices.module';
+import { MaintenanceModule } from './maintenance/maintenance.module';
 import { DispatchModule } from './dispatch/dispatch.module';
 import { DisplayModule } from './display/display.module';
 import { HealthModule } from './health/health.module';
@@ -38,6 +39,7 @@ import { UsersModule } from './users/users.module';
     StationsModule,
     CatalogModule,
     DevicesModule,
+    MaintenanceModule,
     UsersModule,
     OrdersModule,
     PaymentsModule,

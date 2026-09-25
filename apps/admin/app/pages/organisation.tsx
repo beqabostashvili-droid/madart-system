@@ -1,5 +1,5 @@
 'use client';
-import type { BranchView, DeviceView, DeviceWithTokenView, RoleView, StationView, UserView } from '@madart/types';
+import type { BranchView, DeviceView, DeviceWithTokenView, PurgeOrdersResult, RoleView, StationView, UserView } from '@madart/types';
 import { Badge, Button, Field, formatDateTime, Input, Modal, PageTitle, Select, Spinner, Toggle, useResource, useSession } from '@madart/ui';
 import { useEffect, useState } from 'react';
 import { useAdmin } from '../AdminApp';
@@ -324,7 +324,57 @@ export function SettingsPage() {
           { key: 'save', label: '', render: (r) => <Button size="sm" loading={busy} disabled={draft[r.key] === undefined} onClick={async () => { let value: unknown = draft[r.key]; try { value = JSON.parse(draft[r.key]!); } catch { /* string */ } const ok = await submit(() => api.settings.upsert({ key: r.key, value, branchId: branchId ?? null }), 'შენახულია'); if (ok) { setDraft((d) => { const c = { ...d }; delete c[r.key]; return c; }); void settings.refresh(); } }}>შენახვა</Button>, className: 'text-right' },
         ]}
       />
+      <PurgeOrdersCard />
     </>
+  );
+}
+
+function PurgeOrdersCard() {
+  const { api } = useSession();
+  const { submit, busy } = useSubmit();
+  const [open, setOpen] = useState(false);
+  const [typed, setTyped] = useState('');
+  const [result, setResult] = useState<PurgeOrdersResult | null>(null);
+  return (
+    <div className="card mt-8 border-danger/40 p-5">
+      <div className="text-xs font-semibold uppercase tracking-wider text-danger">Danger zone</div>
+      <div className="mt-1 text-lg font-bold">სატესტო შეკვეთების წაშლა</div>
+      <p className="mt-1 max-w-2xl text-sm text-ink-muted">
+        შლის ყველა შეკვეთას ყველა მოდულიდან — გადახდებით, წარმოების დავალებებით და ისტორიით — და ნომრებს თავიდან იწყებს (A001). კატალოგს, რეკლამებს, მოწყობილობებს და მომხმარებლებს არ ეხება. ქმედება შეუქცევადია.
+      </p>
+      {result && (
+        <div className="mt-3 rounded-lg bg-ok-soft px-3 py-2 text-sm text-ok">
+          წაიშალა: {result.orders} შეკვეთა, {result.payments} გადახდა, {result.productionTasks} წარმოების დავალება.
+        </div>
+      )}
+      <Button variant="danger" className="mt-4" onClick={() => { setTyped(''); setOpen(true); }}>
+        შეკვეთების წაშლა…
+      </Button>
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        title="ნამდვილად წავშალო ყველა შეკვეთა?"
+        footer={
+          <>
+            <Button variant="outline" onClick={() => setOpen(false)}>გაუქმება</Button>
+            <Button
+              variant="danger"
+              loading={busy}
+              disabled={typed !== 'DELETE'}
+              onClick={async () => {
+                const r = await submit(() => api.maintenance.purgeOrders(), 'შეკვეთები წაიშალა');
+                if (r) { setResult(r); setOpen(false); }
+              }}
+            >
+              წაშლა
+            </Button>
+          </>
+        }
+      >
+        <p className="text-sm text-ink-muted">დასადასტურებლად აკრიფე <span className="font-mono font-bold text-ink">DELETE</span>.</p>
+        <Input className="mt-3" value={typed} onChange={(e) => setTyped(e.target.value)} placeholder="DELETE" autoFocus />
+      </Modal>
+    </div>
   );
 }
 

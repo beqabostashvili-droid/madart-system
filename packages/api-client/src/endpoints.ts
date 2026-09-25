@@ -37,6 +37,7 @@ import type {
   ProductionConfigInput,
   ProductionTaskView,
   PromotionView,
+  PurgeOrdersResult,
   RefundBody,
   RoleView,
   StationView,
@@ -135,6 +136,10 @@ export function createApiClient(options: HttpOptions) {
       roles: () => http.get<RoleView[]>('/admin/roles'),
       updateRole: (id: string, body: { name?: string; permissions?: string[] }) => http.patch<RoleView>(`/admin/roles/${id}`, body),
       permissions: () => http.get<string[]>('/admin/permissions'),
+    },
+
+    maintenance: {
+      purgeOrders: () => http.post<PurgeOrdersResult>('/admin/maintenance/purge-orders', { confirm: 'DELETE' }),
     },
 
     settings: {

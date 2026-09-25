@@ -8,3 +8,4 @@ export * from './realtime';
 export * from './catalog-import';
 export * from './audit';
 export * from './promotions';
+export * from './maintenance';

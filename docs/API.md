@@ -34,6 +34,7 @@ means any authenticated actor of the branch.
 | GET/POST | /admin/users · PATCH /admin/users/:id | users.read / users.write |
 | GET | /admin/roles · /admin/permissions · PATCH /admin/roles/:id | users.read / roles.write |
 | GET/PUT | /admin/settings | settings.write |
+| POST | /admin/maintenance/purge-orders `{confirm:"DELETE"}` | settings.write | demo/test reset: deletes every order with payments, tasks, history and audit rows, restarts numbering; catalog/org untouched (same as `pnpm db:clean`) |
 
 ## Catalog
 | Method | Path | Perm | Notes |
