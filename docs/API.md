@@ -69,6 +69,7 @@ means any authenticated actor of the branch.
 | GET | /orders/:id · /orders/by-number/:n?branchId · /orders/by-qr/:token | orders.read | |
 | POST | /orders/:id/cancel `{reason}` | orders.cancel (+orders.refund if paid) | audit-logged |
 | GET | /admin/orders/:id/timeline | orders.read | merged order/payment/production/audit history |
+| DELETE | /admin/orders/:id · POST /admin/orders/bulk-delete `{ids}` | settings.write | hard delete of test orders with payments/tasks/history (cancel keeps the record); audit-logged as ORDERS_DELETED |
 
 ## Payments
 | Method | Path | Perm | Notes |

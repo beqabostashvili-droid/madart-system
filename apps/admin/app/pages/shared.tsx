@@ -3,7 +3,7 @@ import type { ApiError } from '@madart/api-client';
 import { Button, cx, useToast } from '@madart/ui';
 import { type ReactNode, useState } from 'react';
 
-export function Table<T>({ rows, columns, rowKey, onRow, empty = 'ჩანაწერები არ არის' }: { rows: T[]; columns: { key: string; label: string; render: (r: T) => ReactNode; className?: string }[]; rowKey: (r: T) => string; onRow?: (r: T) => void; empty?: string }) {
+export function Table<T>({ rows, columns, rowKey, onRow, empty = 'ჩანაწერები არ არის' }: { rows: T[]; columns: { key: string; label: ReactNode; render: (r: T) => ReactNode; className?: string }[]; rowKey: (r: T) => string; onRow?: (r: T) => void; empty?: string }) {
   return (
     <div className="card overflow-hidden p-0">
       <table className="w-full text-sm">

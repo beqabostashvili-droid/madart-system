@@ -55,16 +55,44 @@ export function DashboardPage() {
 
 export function OrdersPage({ go, route }: { go: (r: string) => void; route: string }) {
   const { api, rt } = useSession();
-  const { branchId } = useAdmin();
+  const { branchId, can } = useAdmin();
   const [status, setStatus] = useState('');
   const [search, setSearch] = useState('');
   const orders = useResource(() => api.orders.list({ branchId: branchId ?? undefined, status: status || undefined, search: search || undefined, limit: 100 }), [branchId, status, search], { pollMs: 30_000 });
   useRealtimeEvents(rt, () => void orders.refresh(), ['ORDER_CREATED', 'ORDER_STATUS_CHANGED', 'PAYMENT_COMPLETED']);
   const selectedId = route.split('/')[1];
 
+  // hard delete of test orders (settings.write): row checkboxes + one bulk action
+  const canDelete = can('settings.write');
+  const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [confirmDelete, setConfirmDelete] = useState(false);
+  const { submit, busy } = useSubmit();
+  const visible = orders.data?.items ?? [];
+  const allVisibleSelected = visible.length > 0 && visible.every((o) => selected.has(o.id));
+  const toggle = (id: string) => setSelected((s) => { const n = new Set(s); if (n.has(id)) n.delete(id); else n.add(id); return n; });
+  const toggleAll = () => setSelected(allVisibleSelected ? new Set() : new Set(visible.map((o) => o.id)));
+  const selectColumn = canDelete
+    ? [{
+        key: 'sel',
+        label: <input type="checkbox" checked={allVisibleSelected} onChange={toggleAll} aria-label="ყველას მონიშვნა" className="h-4 w-4 accent-danger" />,
+        render: (o: OrderSummaryView) => <input type="checkbox" checked={selected.has(o.id)} onChange={() => toggle(o.id)} onClick={(e) => e.stopPropagation()} aria-label="მონიშვნა" className="h-4 w-4 accent-danger" />,
+        className: 'w-8',
+      }]
+    : [];
+
   return (
     <>
-      <PageTitle title="Orders" subtitle={orders.data ? `${orders.data.total} შეკვეთა` : ''} />
+      <PageTitle
+        title="Orders"
+        subtitle={orders.data ? `${orders.data.total} შეკვეთა` : ''}
+        actions={
+          canDelete && selected.size > 0 && (
+            <Button variant="danger" onClick={() => setConfirmDelete(true)}>
+              წაშლა ({selected.size})
+            </Button>
+          )
+        }
+      />
       <div className="mb-4 flex gap-3">
         <Input placeholder="ძებნა: ნომერი, სახელი, ტელეფონი" value={search} onChange={(e) => setSearch(e.target.value)} className="max-w-xs" />
         <Select value={status} onChange={(e) => setStatus(e.target.value)} className="max-w-xs">
@@ -77,10 +105,11 @@ export function OrdersPage({ go, route }: { go: (r: string) => void; route: stri
         </Select>
       </div>
       <Table<OrderSummaryView>
-        rows={orders.data?.items ?? []}
+        rows={visible}
         rowKey={(o) => o.id}
         onRow={(o) => go(`orders/${o.id}`)}
         columns={[
+          ...selectColumn,
           { key: 'n', label: '№', render: (o) => <span className="font-bold">{o.publicNumber}</span> },
           { key: 'at', label: 'შექმნა', render: (o) => formatDateTime(o.createdAt) },
           { key: 'src', label: 'წყარო', render: (o) => sourceLabels[o.source] ?? o.source },
@@ -92,6 +121,32 @@ export function OrdersPage({ go, route }: { go: (r: string) => void; route: stri
         ]}
       />
       {selectedId && <OrderDetail id={selectedId} onClose={() => go('orders')} onChanged={() => void orders.refresh()} />}
+      <Modal
+        open={confirmDelete}
+        onClose={() => setConfirmDelete(false)}
+        title={`წავშალო ${selected.size} შეკვეთა?`}
+        footer={
+          <>
+            <Button variant="outline" onClick={() => setConfirmDelete(false)}>გაუქმება</Button>
+            <Button
+              variant="danger"
+              loading={busy}
+              onClick={async () => {
+                const r = await submit(() => api.orders.bulkDelete([...selected]), 'შეკვეთები წაიშალა');
+                if (r) {
+                  setSelected(new Set());
+                  setConfirmDelete(false);
+                  void orders.refresh();
+                }
+              }}
+            >
+              წაშლა
+            </Button>
+          </>
+        }
+      >
+        <p className="text-sm text-ink-muted">შეკვეთები სამუდამოდ წაიშლება გადახდებით, სამზარეულოს დავალებებით და ისტორიით. გაუქმებისგან განსხვავებით ჩანაწერი არ რჩება.</p>
+      </Modal>
     </>
   );
 }
@@ -110,6 +165,7 @@ function OrderDetail({ id, onClose, onChanged }: { id: string; onClose: () => vo
   const { submit, busy } = useSubmit();
   const [reason, setReason] = useState('');
   const [refund, setRefund] = useState<{ paymentId: string; amount: string } | null>(null);
+  const [deleting, setDeleting] = useState(false);
   const o = order.data;
 
   return (
@@ -197,6 +253,34 @@ function OrderDetail({ id, onClose, onChanged }: { id: string; onClose: () => vo
                 >
                   გაუქმება
                 </Button>
+              </div>
+            )}
+            {can('settings.write') && (
+              <div className="flex items-center justify-between rounded-lg border border-danger/30 px-3 py-2">
+                <span className="text-xs text-ink-muted">სატესტო შეკვეთა? სამუდამო წაშლა ჩანაწერის გარეშე.</span>
+                {deleting ? (
+                  <span className="flex gap-2">
+                    <Button size="sm" variant="outline" onClick={() => setDeleting(false)}>არა</Button>
+                    <Button
+                      size="sm"
+                      variant="danger"
+                      loading={busy}
+                      onClick={async () => {
+                        const r = await submit(() => api.orders.delete(o.id), `შეკვეთა ${o.publicNumber} წაიშალა`);
+                        if (r) {
+                          onChanged();
+                          onClose();
+                        }
+                      }}
+                    >
+                      დიახ, წაშალე
+                    </Button>
+                  </span>
+                ) : (
+                  <Button size="sm" variant="danger" onClick={() => setDeleting(true)}>
+                    წაშლა
+                  </Button>
+                )}
               </div>
             )}
             {refund && (

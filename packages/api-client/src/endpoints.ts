@@ -37,6 +37,7 @@ import type {
   ProductionConfigInput,
   ProductionTaskView,
   PromotionView,
+  DeleteOrdersResult,
   PurgeOrdersResult,
   RefundBody,
   RoleView,
@@ -157,6 +158,9 @@ export function createApiClient(options: HttpOptions) {
       byQr: (qrToken: string) => http.get<OrderView>(`/orders/by-qr/${qrToken}`),
       cancel: (id: string, reason: string) => http.post<OrderView>(`/orders/${id}/cancel`, { reason }),
       timeline: (id: string) => http.get<OrderTimelineEntry[]>(`/admin/orders/${id}/timeline`),
+      /** Hard delete (test data); cancel keeps the record. */
+      delete: (id: string) => http.request<DeleteOrdersResult>('DELETE', `/admin/orders/${id}`),
+      bulkDelete: (ids: string[]) => http.post<DeleteOrdersResult>('/admin/orders/bulk-delete', { ids }),
     },
 
     payments: {
