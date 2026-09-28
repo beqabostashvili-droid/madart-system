@@ -51,6 +51,17 @@ export class CatalogImportService {
     const existingByExt = new Map(existingProducts.map((p) => [p.externalId!, p]));
     const existingCategories = await this.prisma.client.category.findMany();
     const categoryCodes = new Set(existingCategories.map((c) => c.code));
+    // Category codes are derived from names, and that derivation has changed
+    // over time (older imports left EXT_<id> codes). Match an incoming category
+    // to an existing one by Georgian name before treating it as new, so a
+    // re-import never duplicates a category or moves its products.
+    const codeByName = new Map(existingCategories.map((c) => [c.nameKa.trim(), c.code]));
+    for (const c of catalog.categories) {
+      if (!categoryCodes.has(c.code)) {
+        const byName = codeByName.get(c.nameKa.trim());
+        if (byName) c.code = byName;
+      }
+    }
     const catByExt = new Map(catalog.categories.map((c) => [c.externalId, c]));
 
     const items: ImportItemPreview[] = [];
