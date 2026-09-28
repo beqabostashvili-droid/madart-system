@@ -75,7 +75,8 @@ export function CatalogScreen({
         ))}
       </aside>
 
-      <section className="min-w-0 flex-1 overflow-y-auto p-4">
+      {/* pb-40 leaves room for the floating cart bar so the last row's add buttons scroll clear of it */}
+      <section className="min-w-0 flex-1 overflow-y-auto p-4 pb-40">
         {(newPromotions.length > 0 || discountPromotions.length > 0) && (
           <div className="mb-5 grid gap-4 sm:grid-cols-2">
             {newPromotions.length > 0 && <PromoSpotlight promotions={newPromotions} kind="NEW_PRODUCT" onSelect={openPromotion} labels={promoLabels} className="h-52" />}
