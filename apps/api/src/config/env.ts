@@ -12,7 +12,9 @@ const schema = z.object({
   DATABASE_URL: z.string().min(1),
   REDIS_URL: z.string().optional().transform((v) => (v && v.length > 0 ? v : undefined)),
   JWT_SECRET: z.string().min(16),
-  JWT_ACCESS_TTL: z.string().default('12h'),
+  // Staff sign-in lifetime. Admin/POS/KDS screens stay open for days between
+  // shifts, so a 12h token meant re-authenticating every morning.
+  JWT_ACCESS_TTL: z.string().default('7d'),
   DEVICE_TOKEN_TTL: z.string().default('3650d'),
   CORS_ORIGINS: z
     .string()

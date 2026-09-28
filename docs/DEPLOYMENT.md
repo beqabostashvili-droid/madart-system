@@ -39,7 +39,9 @@ Order of operations: Neon DB → Render API (needs `DATABASE_URL`, `API_PUBLIC_U
 See `.env.example`. Required in production: `DATABASE_URL`, `JWT_SECRET`
 (≥32 random chars), `CORS_ORIGINS` (exact origins of the web apps),
 `API_PUBLIC_URL` (used in payment callback URLs). Recommended: `REDIS_URL`
-when running more than one API instance, `LOG_LEVEL=info`.
+when running more than one API instance, `LOG_LEVEL=info`. Staff sign-ins
+last `JWT_ACCESS_TTL` (default 7 days; shorten it for shared or public
+machines) — device tokens are separate and last `DEVICE_TOKEN_TTL`.
 
 ## Database
 ```bash
